@@ -1,369 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AIRMM • Artificial Intelligence Resilience Maturity Model</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #0b1020;
-    --card: #0f172a;
-    --muted: #94a3b8;
-    --text: #e2e8f0;
-    --brand1: #7c3aed;
-    --brand2: #22d3ee;
-    --accent: #34d399;
-    --ring: rgba(124,58,237,.35);
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";
-    color:var(--text);
-    background:
-      radial-gradient(60rem 60rem at 10% -10%, rgba(34,211,238,.18), transparent 40%),
-      radial-gradient(60rem 60rem at 110% 10%, rgba(124,58,237,.18), transparent 40%),
-      linear-gradient(180deg,#0b1020 0%, #0b1020 60%, #0b1020 100%);
-    overflow-x:hidden;
-  }
-  .wrap{max-width:1200px;margin:0 auto;padding:28px 20px 80px}
-  .nav{
-    display:flex;align-items:center;gap:16px;justify-content:space-between;margin-bottom:28px
-  }
-  .brand{display:flex;align-items:center;gap:14px}
-  .brand img{width:44px;height:44px;border-radius:10px;background:#0000000d;object-fit:contain}
-  .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.2px}
-  .tabs{
-    display:flex;gap:10px;flex-wrap:wrap
-  }
-  .tab{
-    appearance:none;border:1px solid #1f2945;background:#0c1531;color:#cbd5e1;
-    padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:600;
-    transition:.18s ease;position:relative;isolation:isolate
-  }
-  .tab:hover{border-color:#334155;color:#e2e8f0}
-  .tab.active{
-    color:#0b1020;background:linear-gradient(100deg,var(--brand2),var(--brand1));
-    border-color:transparent;box-shadow:0 0 0 6px var(--ring)
-  }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI‑RMM • Artificial Intelligence Resilience Maturity Model</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1020;
+      --bg-soft:#0f1630;
+      --card:#121a39;
+      --ink:#eaf2ff;
+      --muted:#a8b3cf;
+      --accent:#6ee7f9;
+      --accent-2:#7c5cff;
+      --accent-3:#38f29b;
+      --ring: rgba(108, 99, 255, .35);
+      --grad: radial-gradient(1200px 600px at 70% -20%, rgba(124,92,255,.18), transparent 60%),
+              radial-gradient(1000px 600px at -10% 120%, rgba(110,231,249,.12), transparent 50%),
+              linear-gradient(180deg, #0b1020, #0b1020);
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --shadow: 0 20px 40px -20px rgba(0,0,0,.6), 0 10px 30px -10px rgba(124,92,255,.2);
+      --shadow-soft: 0 12px 24px -12px rgba(0,0,0,.5), 0 8px 20px -10px rgba(110,231,249,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--grad), radial-gradient(600px 600px at 110% -10%, rgba(56,242,155,.16), transparent 60%) fixed;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1200px;margin:0 auto;padding:32px 20px 48px}
 
-  /* Hero */
-  .hero{
-    position:relative;overflow:hidden;border-radius:22px;padding:32px;
-    background:
-      radial-gradient(1200px 400px at 20% -40%, rgba(34,211,238,.25), transparent 60%),
-      radial-gradient(1000px 380px at 100% 0%, rgba(124,58,237,.35), transparent 60%),
-      linear-gradient(160deg,#0f172a 0%, #0b132e 100%);
-    border:1px solid #1f2945;
-    box-shadow: 0 40px 120px -40px #000;
-    margin-bottom:20px
-  }
-  .hero h2{margin:0 0 10px;font-size:28px;font-weight:800;letter-spacing:.2px}
-  .hero p{margin:8px 0 0;color:var(--muted);max-width:980px;line-height:1.6}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-  .btn{
-    background:linear-gradient(100deg,var(--brand2),var(--brand1));
-    color:#0b1020;border:none;padding:12px 16px;border-radius:12px;
-    font-weight:800;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease
-  }
-  .btn:hover{transform:translateY(-1px);box-shadow:0 12px 40px -10px var(--ring)}
-  .btn.secondary{
-    background:#0c1531;color:#e2e8f0;border:1px solid #1f2945;font-weight:700
-  }
-  .pill{display:inline-flex;align-items:center;gap:8px;color:#0b1020;background:#a7f3d0;border-radius:999px;padding:6px 10px;font-weight:800;font-size:12px}
+    /* Top Bar */
+    .brand{
+      display:flex;align-items:center;gap:14px;margin-bottom:20px;
+    }
+    .brand img{
+      width:72px;height:72px;object-fit:contain;border-radius:14px;
+      filter:drop-shadow(0 8px 24px rgba(126, 96, 255, .25));
+    }
+    .brand h1{
+      margin:0;font-size:28px;letter-spacing:.2px;font-weight:800;
+      background:linear-gradient(90deg,#eaf2ff,#9ac4ff,#6ee7f9,#38f29b);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-left:auto}
+    .badge{
+      padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);
+      color:var(--muted);font-size:12px;border:1px solid rgba(255,255,255,.08)
+    }
 
-  /* Cards */
-  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}
-  .card{
-    grid-column:span 12;background:linear-gradient(180deg,#0f172a 0%, #0c1228 100%);
-    border:1px solid #1f2945;border-radius:18px;padding:18px
-  }
-  @media (min-width:880px){
-    .col-6{grid-column:span 6}
-    .col-4{grid-column:span 4}
-    .col-8{grid-column:span 8}
-  }
-  .card h3{margin:2px 0 10px;font-size:16px;letter-spacing:.2px}
-  .muted{color:var(--muted)}
-  .list{display:grid;gap:10px;margin-top:8px}
-  .li{
-    background:#0b1326;border:1px solid #1a2546;border-radius:12px;padding:12px
-  }
-  .badge{font-size:11px;border:1px solid #223055;color:#a5b4fc;background:#0b1538;padding:4px 8px;border-radius:999px;font-weight:700}
-  .kpi{display:flex;align-items:center;justify-content:space-between;background:#0b1326;border:1px solid #1a2546;border-radius:14px;padding:14px;margin-top:10px}
-  .kpi strong{font-size:22px}
-  .progress{
-    --p:0%;
-    width:100%;height:10px;border-radius:999px;background:#0b1326;border:1px solid #1b2648;overflow:hidden
-  }
-  .progress > i{display:block;width:var(--p);height:100%;background:linear-gradient(90deg,var(--brand2),var(--brand1))}
-  .levels{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-  .level{
-    background:#0b1326;border:1px solid #1a2546;color:#cbd5e1;padding:8px 10px;border-radius:999px;font-weight:700;font-size:12px
-  }
-  .level.good{border-color:#155e45;background:#052d22;color:#86efac}
-  .level.warn{border-color:#6b4210;background:#2a1504;color:#f9c56b}
-  .level.bad{border-color:#71211c;background:#2d0b0b;color:#fda4af}
+    /* Tabs */
+    .tabs{
+      display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 18px;
+      background:rgba(255,255,255,.04);padding:8px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .tab{
+      appearance:none;border:0;cursor:pointer;color:var(--muted);
+      background:transparent;padding:12px 18px;border-radius:999px;
+      font-weight:600;letter-spacing:.2px;transition:.2s;
+    }
+    .tab[aria-selected="true"]{
+      color:#0b1020;background:linear-gradient(90deg,#6ee7f9,#7c5cff);
+      box-shadow:0 6px 20px -6px var(--ring);
+    }
+    .panels{position:relative}
+    .panel{
+      display:none;animation:fade .3s ease both;
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:var(--radius-xl);box-shadow:var(--shadow);padding:28px;
+    }
+    .panel.active{display:block}
+    @keyframes fade{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 
-  /* Tab panels */
-  .panel{display:none;animation:fade .24s ease}
-  .panel.active{display:block}
-  @keyframes fade{from{opacity:.6;transform:translateY(4px)}to{opacity:1;transform:none}}
+    /* Landing content */
+    .hero{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;
+    }
+    @media (max-width: 940px){.hero{grid-template-columns:1fr}}
+    .hero-visual{
+      background:radial-gradient(500px 220px at 50% -50%, rgba(108,99,255,.35), transparent 60%),
+                 linear-gradient(180deg, rgba(124,92,255,.12), rgba(110,231,249,.08));
+      border:1px solid rgba(255,255,255,.10);border-radius:var(--radius-xl);padding:24px;
+      box-shadow:var(--shadow-soft)
+    }
+    .hero-visual img{
+      width:160px;height:160px;object-fit:contain;display:block;margin:10px auto 18px;
+      filter:drop-shadow(0 16px 40px rgba(124,92,255,.35));
+    }
+    .hero-visual .cta{
+      display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px
+    }
+    .btn{
+      appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:700;cursor:pointer;
+      color:#0b1020;background:linear-gradient(90deg,#6ee7f9,#38f29b);
+      box-shadow:0 10px 24px -10px var(--ring);transition:transform .15s ease;
+    }
+    .btn.secondary{background:rgba(255,255,255,.08);color:var(--ink);border:1px solid rgba(255,255,255,.12)}
+    .btn:active{transform:translateY(1px)}
+    .lead{
+      color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 10px;
+    }
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+    @media (max-width: 940px){.cards{grid-template-columns:1fr}}
+    .card{
+      background:var(--card);border:1px solid rgba(255,255,255,.08);
+      padding:18px;border-radius:16px;box-shadow:var(--shadow-soft)
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .kpi{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .pill{padding:6px 10px;font-size:12px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted);border:1px solid rgba(255,255,255,.08)}
+    .list{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+    .list li{margin:6px 0}
 
-  /* iframe container */
-  .frame-wrap{
-    position:relative;border-radius:18px;overflow:hidden;border:1px solid #1f2945;background:#0b1326
-  }
-  .frame-head{
-    display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #1a2546;background:linear-gradient(180deg,#0f172a,#0b1326)
-  }
-  .dot{width:10px;height:10px;border-radius:50%}
-  .dot.red{background:#ef4444}.dot.yellow{background:#f59e0b}.dot.green{background:#22c55e}
-  iframe{width:100%;height:72vh;border:0;display:block;background:#fff}
+    /* Roadmap */
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    @media (max-width: 940px){.grid-2{grid-template-columns:1fr}}
+    .timeline{
+      position:relative;padding:10px 0 10px 28px;border-left:2px dashed rgba(255,255,255,.15);
+    }
+    .milestone{
+      position:relative;margin:0 0 24px;padding-left:8px
+    }
+    .dot{
+      position:absolute;left:-31px;top:4px;width:14px;height:14px;border-radius:50%;
+      background:linear-gradient(90deg,#6ee7f9,#7c5cff);box-shadow:0 0 0 4px rgba(124,92,255,.15);
+      border:2px solid #0b1020;
+    }
+    .ms-title{font-weight:700;margin:0}
+    .ms-meta{font-size:12px;color:var(--muted);margin:4px 0 8px}
+    .stack{display:grid;gap:14px}
+    .stack .card h4{margin:0 0 6px}
+    .tiny{font-size:12px;color:var(--muted)}
 
-  footer{opacity:.8;color:#94a3b8;margin-top:34px;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-  a.inline{color:#a5b4fc;text-decoration:none;border-bottom:1px dashed #475569}
-  a.inline:hover{border-bottom-color:#a5b4fc}
-</style>
+    /* Footer */
+    footer{
+      margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
+    }
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="nav">
-      <div class="brand">
-        <img src="logo.png" alt="AIRMM logo" />
-        <h1>AIRMM — Artificial Intelligence Resilience Maturity Model</h1>
-      </div>
-      <div class="tabs" role="tablist" aria-label="Sections">
-        <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-overview" id="btn-overview">Overview</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="tab-dashboard" id="btn-dashboard">Assessment Dashboard</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="tab-controls" id="btn-controls">Controls Overview</button>
+    <!-- Brand row -->
+    <div class="brand" role="banner" aria-label="AI‑RMM">
+      <img src="logo.png" width="1500" alt="AI‑RMM logo" />
+      <h1>AI‑RMM • Artificial Intelligence Resilience Maturity Model</h1>
+      <div class="badges">
+        <span class="badge">Version 0.1</span>
+        <span class="badge">Updated: 19 Jul 2025</span>
+        <span class="badge">GPL v3.0</span>
       </div>
     </div>
 
-    <!-- OVERVIEW (landing) -->
-    <section id="tab-overview" class="panel active" role="tabpanel" aria-labelledby="btn-overview">
-      <div class="hero">
-        <span class="pill">v0.1 • 19 Jul 2025</span>
-        <h2 style="margin-top:10px">Build AI‑aware organizational resilience, step by step</h2>
-        <p>
-          AI‑RMM (Artificial Intelligence Resilience Maturity Model) is a practical framework that helps organizations
-          assess, measure, and improve resilience around AI systems. It aligns with the NIST AI RMF core functions
-          — <strong>Govern</strong>, <strong>Map</strong>, <strong>Measure</strong>, and <strong>Manage</strong> —
-          and structures progress across five maturity levels from <em>Initial</em> to <em>Optimizing</em>.
-        </p>
-        <div class="cta-row">
-          <button class="btn" onclick="switchTab('tab-dashboard');">Start the Assessment</button>
-          <button class="btn secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">
-            Learn how it works
-          </button>
-        </div>
-      </div>
+    <!-- Tabs -->
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="panel-home" id="tab-home">Overview</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-assess" id="tab-assess">Assessment</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-roadmap" id="tab-roadmap">Orientation & Roadmap</button>
+    </nav>
 
-      <div class="grid" id="about">
-        <div class="card col-8">
-          <h3>What is AIRMM?</h3>
-          <p class="muted">
-            A maturity pathway for organizations to anticipate, withstand, recover from, and adapt to AI‑related
-            disruptions. It distinguishes between “resilient AI systems” and “organizations resilient to AI” by
-            focusing on <em>AI‑Aware Organizational Resilience</em>—policies, governance, monitoring, workforce,
-            and operational safeguards around AI usage.
-          </p>
-          <div class="kpi" style="margin-top:12px">
-            <div>
-              <div class="muted" style="font-size:12px">Target Maturity</div>
-              <strong>Level 4–5</strong>
+    <section class="panels">
+      <!-- PANEL 1: Landing / Overview -->
+      <article class="panel active" role="tabpanel" id="panel-home" aria-labelledby="tab-home">
+        <div class="hero">
+          <div>
+            <h2 style="margin-top:0;font-size:28px">Build resilience for the AI era</h2>
+            <p class="lead">
+              AI‑RMM is a practical maturity model that helps organizations
+              <strong>govern</strong>, <strong>map</strong>, <strong>measure</strong>, and <strong>manage</strong> risks from AI systems—so you can
+              anticipate, withstand, recover from, and adapt to AI‑related disruption.
+            </p>
+            <p class="lead">
+              The model uses five maturity levels (Initial → Optimizing) and aligns with the NIST AI Risk Management Framework. It turns broad principles into actionable controls and a clear path to progress.
+            </p>
+
+            <div class="cards" aria-label="What you’ll find">
+              <div class="card">
+                <h3>Five maturity levels</h3>
+                <ul class="list">
+                  <li><strong>1 — Initial:</strong> ad‑hoc, reactive</li>
+                  <li><strong>2 — Managed:</strong> basic, localized</li>
+                  <li><strong>3 — Defined:</strong> standardized & documented</li>
+                  <li><strong>4 — Quantitatively Managed:</strong> driven by metrics</li>
+                  <li><strong>5 — Optimizing:</strong> continuous improvement</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Four core functions</h3>
+                <div class="kpi">
+                  <span class="pill">🏛️ GOVERN</span>
+                  <span class="pill">🗺️ MAP</span>
+                  <span class="pill">📊 MEASURE</span>
+                  <span class="pill">⚙️ MANAGE</span>
+                </div>
+                <ul class="list">
+                  <li>Policy, accountability & culture</li>
+                  <li>System context & categorization</li>
+                  <li>Trustworthiness & risk tracking</li>
+                  <li>Operational risk response</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Why it matters</h3>
+                <ul class="list">
+                  <li>Turn AI principles into repeatable practice</li>
+                  <li>Clarify roles, evidence, and metrics</li>
+                  <li>Keep humans in control — <em>always</em></li>
+                </ul>
+              </div>
             </div>
-            <div style="flex:1;margin:0 12px">
-              <div class="progress" style="--p:70%"><i></i></div>
+          </div>
+
+          <div class="hero-visual" aria-label="Get started">
+            <img src="logo.png" alt="" />
+            <p class="lead" style="text-align:center">
+              Ready to benchmark your current posture and generate an action plan?
+            </p>
+            <div class="cta">
+              <button class="btn" id="go-assessment">Open the Assessment →</button>
+              <a class="btn secondary" href="https://osf.io/kb8a5/" target="_blank" rel="noopener">Initial work on OSF</a>
             </div>
-            <span class="badge">Quantitatively Managed → Optimizing</span>
+            <p class="tiny" style="text-align:center;margin-top:10px">
+              Tip: You can save progress locally and export a report at any time.
+            </p>
+			
+			
           </div>
+		  
+		  <div class="hero-visual" aria-label="Get started">
+				<p class="lead" style="text-align:center">
+				<h3> Licence </h3>
+				  © 2025 Yiannis Pavlosoglou. Licensed under GPL v3.0. See the project on <a  href="https://osf.io/kb8a5/" target="_blank" rel="noopener">OSF</a> for source artifacts.
+				</p>
+			</div>
+			
+			<div class="hero-visual" aria-label="Get started">
+				<h3> Contributors </h3>
+				Core work by the author with contributions from: Alice Milshtein, Athanasios Mylonopoulos, Athanasios Staveris.
+			</div>
+		  
+		  
+		  
         </div>
+      </article>
 
-        <div class="card col-4">
-          <h3>Two‑digit versioning</h3>
-          <p class="muted">
-            Documents use a simple <strong>d.d</strong> scheme (e.g., 0.1). Minor updates accrue until they roll into the next major (e.g., 0.9 → 1.0). Clarity over complexity.
-          </p>
-          <div class="list">
-            <div class="li"><strong>Major (X.0):</strong> structural/strategic changes.</div>
-            <div class="li"><strong>Minor (0.Y):</strong> incremental refinements.</div>
-          </div>
+      <!-- PANEL 2: Assessment (your existing airmm.html) -->
+      <article class="panel" role="tabpanel" id="panel-assess" aria-labelledby="tab-assess">
+        <div class="card" style="margin-bottom:16px">
+          <h3 style="margin:0 0 6px">AI‑RMM Assessment</h3>
+          <p class="tiny">Interactive dashboard with maturity questions, analytics, and export options.</p>
         </div>
+        <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow-soft);">
+          <iframe src="airmm.html" title="AI‑RMM Assessment" style="width:100%;height:78vh;border:0;background:#fff"></iframe>
+        </div>
+      </article>
 
-        <div class="card col-6">
-          <h3>Five maturity levels</h3>
-          <div class="levels">
-            <span class="level bad">1 • Initial</span>
-            <span class="level warn">2 • Managed</span>
-            <span class="level">3 • Defined</span>
-            <span class="level good">4 • Quantitatively Managed</span>
-            <span class="level good">5 • Optimizing</span>
-          </div>
-          <p class="muted" style="margin-top:10px">
-            Each level bundles concrete controls—from ad‑hoc awareness through standardized processes, measurable performance, and continuous improvement.
-          </p>
-        </div>
-
-        <div class="card col-6">
-          <h3>NIST AI RMF alignment</h3>
-          <div class="list">
-            <div class="li"><strong>Govern:</strong> Policies, accountability, culture, stakeholder engagement, third‑party management.</div>
-            <div class="li"><strong>Map:</strong> Context, categorization, capabilities & scope, component risks, societal impacts.</div>
-            <div class="li"><strong>Measure:</strong> Methods & metrics, trustworthy characteristics, risk tracking, measurement feedback.</div>
-            <div class="li"><strong>Manage:</strong> Prioritization & response, benefit maximization, third‑party risk, treatment & communication.</div>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <h3>Why it matters</h3>
-          <p class="muted">
-            AIRMM helps keep humans firmly in control—establishing guardrails, monitoring, and “kill‑switch” style disengagement for AI that goes off‑spec.
-          </p>
-        </div>
-
-        <div class="card col-4">
-          <h3>License</h3>
-          <p class="muted">
-            © 2025 Yiannis Pavlosoglou. Licensed under <strong>GPL v3.0</strong>. See the project on OSF for source artifacts.
-          </p>
-        </div>
-
-        <div class="card col-4">
-          <h3>Contributors</h3>
-          <p class="muted">Core work by the author with contributions from: <em>Alice Milshtein</em>, <em>Athanasios Mylonopoulos</em>, <em>Athanasios Staveris</em>.</p>
-        </div>
-      </div>
-
-      <div class="grid" style="margin-top:4px">
-        <div class="card col-12">
-          <h3>Fast track to your assessment</h3>
-          <p class="muted">Ready to explore your current posture and gaps? Launch the interactive dashboard.</p>
-          <div class="cta-row">
-            <button class="btn" onclick="switchTab('tab-dashboard');">Open Assessment Dashboard</button>
-            <button class="btn secondary" onclick="switchTab('tab-controls');">Preview Controls Overview</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DASHBOARD (airmm.html) -->
-    <section id="tab-dashboard" class="panel" role="tabpanel" aria-labelledby="btn-dashboard" aria-hidden="true">
-      <div class="frame-wrap">
-        <div class="frame-head">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="muted" style="margin-left:8px">AI‑RMM Comprehensive Assessment Dashboard</span>
-        </div>
-        <!-- Loads your existing file from the same folder -->
-        <iframe src="airmm.html" title="AI-RMM Assessment Dashboard"></iframe>
-      </div>
-      <div class="grid">
-        <div class="card col-12">
-          <h3>Tips</h3>
-          <div class="list">
-            <div class="li">Use the dashboard’s <strong>Save</strong> and <strong>Export</strong> actions to keep your progress.</div>
-            <div class="li">Aim for uniform scores across functions—big gaps often signal governance/implementation misalignment.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTROLS OVERVIEW (rich static content) -->
-    <section id="tab-controls" class="panel" role="tabpanel" aria-labelledby="btn-controls" aria-hidden="true">
-      <div class="grid">
-        <div class="card col-12">
-          <h3>GOVERN • sample sub‑categories & level cues</h3>
-          <div class="list">
-            <div class="li"><strong>Policies & Compliance (Govern 1.1):</strong> from identifying applicable AI laws ➜ standardized, KPI‑tracked compliance ➜ proactive policy updates.</div>
-            <div class="li"><strong>Trustworthy AI Integration (Govern 1.2):</strong> define & embed principles ➜ assess adherence with metrics ➜ continuously refresh to new risks.</div>
-            <div class="li"><strong>Accountability Structures (Govern 2.x):</strong> clarify roles & training ➜ measure effectiveness ➜ refine structures over time.</div>
-          </div>
-        </div>
-
-        <div class="card col-6">
-          <h3>MAP • foundation before risk treatment</h3>
-          <p class="muted">Define purpose, scope, users, deployment contexts, and human oversight; document limitations and TEVV.</p>
-          <div class="list">
-            <div class="li"><strong>Context (Map 1.1):</strong> intended use, user expectations, settings, metrics.</div>
-            <div class="li"><strong>Categorization (Map 2.1):</strong> tasks/techniques, specs, oversight.</div>
-            <div class="li"><strong>Capabilities/Benefits/Costs (Map 3.x):</strong> value vs. non‑monetary costs; training & proficiency; scope drift checks.</div>
-          </div>
-        </div>
-
-        <div class="card col-6">
-          <h3>MEASURE • trustworthy characteristics & tracking</h3>
-          <div class="list">
-            <div class="li"><strong>Methods & Metrics (Measure 1.1):</strong> select, implement, and document; integrate into lifecycle.</div>
-            <div class="li"><strong>Safety, Security, Fairness, Privacy (Measure 2.x):</strong> define metrics, test, monitor in production, and iterate.</div>
-            <div class="li"><strong>Risk Tracking (Measure 3.x):</strong> handle emergent risks and feedback loops; promote risk culture.</div>
-          </div>
-        </div>
-
-        <div class="card col-12">
-          <h3>MANAGE • operationalize decisions</h3>
-          <div class="list">
-            <div class="li"><strong>Prioritization & Response (Manage 1.x):</strong> gap analysis, mitigation plans, trade‑offs, residual risk documentation.</div>
-            <div class="li"><strong>Benefit Maximization (Manage 2.x):</strong> maintain performance, consider non‑AI alternatives, train, and define disengagement criteria.</div>
-            <div class="li"><strong>Third‑party & Communication (Manage 3–4):</strong> supply‑chain oversight; post‑deployment monitoring; incident response & transparency.</div>
-          </div>
-          <div class="kpi">
-            <div>
-              <div class="muted" style="font-size:12px">Coverage preview</div>
-              <strong>Govern • Map • Measure • Manage</strong>
+      <!-- PANEL 3: Orientation & Roadmap -->
+      <article class="panel" role="tabpanel" id="panel-roadmap" aria-labelledby="tab-roadmap">
+        <div class="grid-2">
+          <!-- Orientation / Controls map -->
+          <div class="stack" aria-label="Controls orientation">
+            <div class="card">
+              <h4>Controls Orientation — where to start</h4>
+              <p class="lead">
+                Use this quick map to sequence your rollout. Establish policy and roles first, then build system understanding, measurement, and operational response.
+              </p>
+              <ul class="list">
+                <li><strong>🏛️ GOVERN:</strong> policies, accountability, inventory, oversight culture.</li>
+                <li><strong>🗺️ MAP:</strong> purposes, users, context, categorization, scope & benefits/costs.</li>
+                <li><strong>📊 MEASURE:</strong> TEVV, safety, bias/fairness, privacy, sustainability, risk tracking.</li>
+                <li><strong>⚙️ MANAGE:</strong> prioritization, incident response, disengagement “kill‑switch”, third‑party risks.</li>
+              </ul>
             </div>
-            <div class="progress" style="--p:85%"><i></i></div>
-            <span class="badge">Excel Matrix distilled (static)</span>
+
+            <div class="card">
+              <h4>Recommended evidence by level</h4>
+              <ul class="list">
+                <li><strong>Level 1 → 2:</strong> basic policies, role definitions, initial inventory, incident plan outline.</li>
+                <li><strong>Level 2 → 3:</strong> standardized procedures, training, context docs, oversight mechanisms.</li>
+                <li><strong>Level 3 → 4:</strong> KPIs & thresholds, monitoring dashboards, periodic evaluations.</li>
+                <li><strong>Level 4 → 5:</strong> continuous improvement cycles, predictive analyses, program reviews.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>Quick wins (first 30–60 days)</h4>
+              <ul class="list">
+                <li>Form an executive‑sponsored AI risk council with clear mandates</li>
+                <li>Create an AI system inventory with risk tiers and owners</li>
+                <li>Adopt minimum safety & oversight criteria for all AI use cases</li>
+                <li>Document a rapid disengagement procedure (“big red button”)</li>
+              </ul>
+            </div>
           </div>
-          <div class="cta-row" style="margin-top:12px">
-            <button class="btn" onclick="switchTab('tab-dashboard');">Go to Interactive Dashboard</button>
-            <button class="btn secondary" onclick="switchTab('tab-overview');">Back to Overview</button>
+
+          <!-- Timeline / Roadmap -->
+          <div>
+            <div class="card" style="margin-bottom:16px">
+              <h4>Roadmap — evolve with confidence</h4>
+              <p class="tiny">A pragmatic sequence you can adapt to your scale and risk appetite.</p>
+            </div>
+            <div class="timeline" aria-label="Timeline roadmap">
+              <div class="milestone">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="ms-title">Phase 1 — Foundation (Weeks 0–8)</p>
+                <p class="ms-meta">Govern & Map</p>
+                <ul class="list">
+                  <li>Approve policy baseline and role assignments</li>
+                  <li>Stand up AI inventory and risk tiering</li>
+                  <li>Define intended purpose & constraints per use case</li>
+                </ul>
+              </div>
+              <div class="milestone">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="ms-title">Phase 2 — Controls & Evidence (Months 3–4)</p>
+                <p class="ms-meta">Map & Measure</p>
+                <ul class="list">
+                  <li>Document TEVV approach and trustworthy‑AI checks</li>
+                  <li>Set metrics for safety, bias/fairness, privacy, reliability</li>
+                  <li>Launch monitoring & alerting for production systems</li>
+                </ul>
+              </div>
+              <div class="milestone">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="ms-title">Phase 3 — Operations (Months 5–6)</p>
+                <p class="ms-meta">Manage</p>
+                <ul class="list">
+                  <li>Practice incident response (table‑top + red‑team)</li>
+                  <li>Finalize disengagement/deactivation runbooks</li>
+                  <li>Integrate third‑party risk reviews into procurement</li>
+                </ul>
+              </div>
+              <div class="milestone">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="ms-title">Phase 4 — Optimization (Month 7+)</p>
+                <p class="ms-meta">All functions</p>
+                <ul class="list">
+                  <li>Quantitative targets; program‑level KPIs & reviews</li>
+                  <li>Continuous improvement cadences and retrospectives</li>
+                  <li>Proactive change‑watching for new AI threats</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </article>
     </section>
 
     <footer>
-      <div>© 2025 • AIRMM (AI‑RMM) • GPL v3.0</div>
-      <div>Based on NIST AI Risk Management Framework • Version 0.1 (19 Jul 2025)</div>
+      <span>© 2025 AI‑RMM • All rights reserved.</span>
+      <span>See the initial work: <a href="https://osf.io/kb8a5/" target="_blank" rel="noopener">osf.io/kb8a5</a></span>
     </footer>
   </div>
 
-<script>
-  // Tab switching
-  const buttons = {
-    'btn-overview': 'tab-overview',
-    'btn-dashboard': 'tab-dashboard',
-    'btn-controls': 'tab-controls'
-  };
-  Object.keys(buttons).forEach(id=>{
-    document.getElementById(id).addEventListener('click', ()=>switchTab(buttons[id]));
-  });
-  function switchTab(targetId){
-    // tabs
-    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-    const btn = document.querySelector(`[aria-controls="${targetId}"]`);
-    if(btn){ btn.classList.add('active'); btn.setAttribute('aria-selected','true'); }
-    // panels
-    document.querySelectorAll('.panel').forEach(p=>{ p.classList.remove('active'); p.setAttribute('aria-hidden','true'); });
-    const panel = document.getElementById(targetId);
-    panel.classList.add('active'); panel.setAttribute('aria-hidden','false');
-    // focus management
-    panel.setAttribute('tabindex','-1'); panel.focus({preventScroll:true});
-    // optional smooth scroll for small screens
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
-
-  // Keyboard shortcuts: Ctrl+1/2/3
-  document.addEventListener('keydown', (e)=>{
-    if(e.ctrlKey || e.metaKey){
-      if(e.key==='1'){ e.preventDefault(); switchTab('tab-overview'); }
-      if(e.key==='2'){ e.preventDefault(); switchTab('tab-dashboard'); }
-      if(e.key==='3'){ e.preventDefault(); switchTab('tab-controls'); }
-    }
-  });
-</script>
+  <script>
+    // Simple tabs
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const panels = {
+      home: document.getElementById('panel-home'),
+      assess: document.getElementById('panel-assess'),
+      roadmap: document.getElementById('panel-roadmap')
+    };
+    const setActive = (id) => {
+      tabs.forEach(t => t.setAttribute('aria-selected', String(t.id === 'tab-' + id)));
+      Object.entries(panels).forEach(([k, el]) => el.classList.toggle('active', k === id));
+      // Focus handling
+      document.getElementById('tab-' + id).focus({preventScroll:true});
+    };
+    tabs.forEach(btn=>{
+      btn.addEventListener('click', ()=> setActive(btn.id.replace('tab-','')));
+      btn.addEventListener('keydown', (e)=>{
+        if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+          e.preventDefault();
+          const i = tabs.indexOf(btn);
+          const next = e.key==='ArrowRight' ? (i+1)%tabs.length : (i-1+tabs.length)%tabs.length;
+          tabs[next].click();
+        }
+      });
+    });
+    // CTA jumps to Assessment
+    document.getElementById('go-assessment').addEventListener('click', ()=> setActive('assess'));
+  </script>
 </body>
 </html>
