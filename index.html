@@ -364,34 +364,56 @@
   </div>
 
   <script>
-    // Simple tabs
-    const tabs = Array.from(document.querySelectorAll('.tab'));
-    const panels = {
-      home: document.getElementById('panel-home'),
-      assess: document.getElementById('panel-assess'),
-      roadmap: document.getElementById('panel-roadmap')
-    };
-    const setActive = (id) => {
-      tabs.forEach(t => t.setAttribute('aria-selected', String(t.id === 'tab-' + id)));
-      Object.entries(panels).forEach(([k, el]) => el.classList.toggle('active', k === id));
-      // Focus handling
-      document.getElementById('tab-' + id).focus({preventScroll:true});
-    };
-    tabs.forEach(btn=>{
-      btn.addEventListener('click', ()=> setActive(btn.id.replace('tab-','')));
-      btn.addEventListener('keydown', (e)=>{
-        if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
-          e.preventDefault();
-          const i = tabs.indexOf(btn);
-          const next = e.key==='ArrowRight' ? (i+1)%tabs.length : (i-1+tabs.length)%tabs.length;
-          tabs[next].click();
-        }
-      });
+  // Simple tabs (safer)
+  const tabs = Array.from(document.querySelectorAll('.tab'));
+  const panels = {
+    home: document.getElementById('panel-home'),
+    assess: document.getElementById('panel-assess'),
+    roadmap: document.getElementById('panel-roadmap')
+  };
+
+  function setActive(id) {
+    // 1) Update aria-selected on tabs
+    tabs.forEach(t => t.setAttribute('aria-selected', String(t.id === 'tab-' + id)));
+
+    // 2) Toggle panels (skip nulls to avoid crashes)
+    Object.entries(panels).forEach(([k, el]) => {
+      if (!el) return; // guard: panel missing
+      el.classList.toggle('active', k === id);
+      el.setAttribute('aria-hidden', String(k !== id));
     });
-    // CTA jumps to Assessment
-    document.getElementById('go-assessment').addEventListener('click', ()=> setActive('assess'));
-  </script>
+
+    // 3) Focus the active tab if present
+    const btn = document.getElementById('tab-' + id);
+    if (btn && typeof btn.focus === 'function') {
+      btn.focus({ preventScroll: true });
+    }
+  }
+
+  // Wire events
+  tabs.forEach((btn, i) => {
+    btn.addEventListener('click', () => setActive(btn.id.replace('tab-','')));
+    btn.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        const next = (i + dir + tabs.length) % tabs.length;
+        tabs[next].click();
+      }
+    });
+  });
+
+  // CTA jumps to Assessment (guard if missing)
+  const cta = document.getElementById('go-assessment');
+  if (cta) cta.addEventListener('click', () => setActive('assess'));
+
+  // Initialize to the currently marked tab or default to 'home'
+  const initiallySelected = tabs.find(t => t.getAttribute('aria-selected') === 'true');
+  setActive(initiallySelected ? initiallySelected.id.replace('tab-','') : 'home');
+</script>
+
 </body>
 </html>
+
 
 
