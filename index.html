@@ -8,42 +8,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #0b1020;
-      --bg-soft:#0f1630;
-      --card:#121a39;
-      --ink:#eaf2ff;
-      --muted:#a8b3cf;
-      --accent:#6ee7f9;
-      --accent-2:#7c5cff;
-      --accent-3:#38f29b;
+      --bg:#0b1020; --bg-soft:#0f1630; --card:#121a39;
+      --ink:#eaf2ff; --muted:#a8b3cf;
+      --accent:#6ee7f9; --accent2:#7c5cff; --accent3:#38f29b;
       --ring: rgba(108, 99, 255, .35);
-      --grad: radial-gradient(1200px 600px at 70% -20%, rgba(124,92,255,.18), transparent 60%),
-              radial-gradient(1000px 600px at -10% 120%, rgba(110,231,249,.12), transparent 50%),
-              linear-gradient(180deg, #0b1020, #0b1020);
-      --radius-xl: 22px;
-      --radius-lg: 16px;
+      --radius-xl: 22px; --radius-lg:16px;
       --shadow: 0 20px 40px -20px rgba(0,0,0,.6), 0 10px 30px -10px rgba(124,92,255,.2);
       --shadow-soft: 0 12px 24px -12px rgba(0,0,0,.5), 0 8px 20px -10px rgba(110,231,249,.15);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       color:var(--ink);
-      background:var(--grad), radial-gradient(600px 600px at 110% -10%, rgba(56,242,155,.16), transparent 60%) fixed;
+      background:
+        radial-gradient(1200px 600px at 70% -20%, rgba(124,92,255,.18), transparent 60%),
+        radial-gradient(1000px 600px at -10% 120%, rgba(110,231,249,.12), transparent 50%),
+        linear-gradient(180deg, #0b1020, #0b1020);
     }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1200px;margin:0 auto;padding:32px 20px 48px}
 
-    /* Top Bar */
-    .brand{
-      display:flex;align-items:center;gap:14px;margin-bottom:20px;
-    }
+    /* Brand row */
+    .brand{display:flex;align-items:center;gap:14px;margin-bottom:20px}
     .brand img{
-      width:72px;height:72px;object-fit:contain;border-radius:14px;
-      filter:drop-shadow(0 8px 24px rgba(126, 96, 255, .25));
+      width:92px;height:92px;object-fit:contain;border-radius:18px;
+      filter:drop-shadow(0 10px 28px rgba(126, 96, 255, .28));
+      background:#060a18;border:1px solid rgba(255,255,255,.08)
     }
     .brand h1{
       margin:0;font-size:28px;letter-spacing:.2px;font-weight:800;
@@ -51,26 +43,25 @@
       -webkit-background-clip:text;background-clip:text;color:transparent;
     }
     .badges{display:flex;flex-wrap:wrap;gap:10px;margin-left:auto}
-    .badge{
-      padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);
-      color:var(--muted);font-size:12px;border:1px solid rgba(255,255,255,.08)
-    }
+    .badge{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);
+           color:var(--muted);font-size:12px;border:1px solid rgba(255,255,255,.08)}
 
     /* Tabs */
     .tabs{
       display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 18px;
-      background:rgba(255,255,255,.04);padding:8px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);padding:8px;border-radius:999px;border:1px solid rgba(255,255,255,.08)
     }
     .tab{
       appearance:none;border:0;cursor:pointer;color:var(--muted);
       background:transparent;padding:12px 18px;border-radius:999px;
-      font-weight:600;letter-spacing:.2px;transition:.2s;
+      font-weight:700;letter-spacing:.2px;transition:.2s;
     }
     .tab[aria-selected="true"]{
       color:#0b1020;background:linear-gradient(90deg,#6ee7f9,#7c5cff);
       box-shadow:0 6px 20px -6px var(--ring);
     }
+
+    /* Panels */
     .panels{position:relative}
     .panel{
       display:none;animation:fade .3s ease both;
@@ -81,77 +72,58 @@
     .panel.active{display:block}
     @keyframes fade{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 
-    /* Landing content */
-    .hero{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;
-    }
+    /* Overview */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
     @media (max-width: 940px){.hero{grid-template-columns:1fr}}
+    .lead{color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 10px}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+    @media (max-width: 940px){.cards{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);padding:18px;border-radius:16px;box-shadow:var(--shadow-soft)}
+    .card h3{margin:0 0 8px;font-size:16px}
+    .pill{padding:6px 10px;font-size:12px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted);border:1px solid rgba(255,255,255,.08)}
+    .list{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+    .list li{margin:6px 0}
+
     .hero-visual{
       background:radial-gradient(500px 220px at 50% -50%, rgba(108,99,255,.35), transparent 60%),
                  linear-gradient(180deg, rgba(124,92,255,.12), rgba(110,231,249,.08));
-      border:1px solid rgba(255,255,255,.10);border-radius:var(--radius-xl);padding:24px;
-      box-shadow:var(--shadow-soft)
+      border:1px solid rgba(255,255,255,.10);border-radius:var(--radius-xl);padding:24px;box-shadow:var(--shadow-soft)
     }
-    .hero-visual img{
-      width:160px;height:160px;object-fit:contain;display:block;margin:10px auto 18px;
-      filter:drop-shadow(0 16px 40px rgba(124,92,255,.35));
+    /* Bigger, responsive GIF */
+    .hero-visual img.hero-gif{
+      display:block;margin:10px auto 18px;border-radius:16px;object-fit:cover;
+      max-width:100%;width:720px;height:auto;
     }
-    .hero-visual .cta{
-      display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px
-    }
+    .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px}
     .btn{
-      appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:700;cursor:pointer;
+      appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:800;cursor:pointer;
       color:#0b1020;background:linear-gradient(90deg,#6ee7f9,#38f29b);
       box-shadow:0 10px 24px -10px var(--ring);transition:transform .15s ease;
     }
     .btn.secondary{background:rgba(255,255,255,.08);color:var(--ink);border:1px solid rgba(255,255,255,.12)}
     .btn:active{transform:translateY(1px)}
-    .lead{
-      color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 10px;
-    }
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
-    @media (max-width: 940px){.cards{grid-template-columns:1fr}}
-    .card{
-      background:var(--card);border:1px solid rgba(255,255,255,.08);
-      padding:18px;border-radius:16px;box-shadow:var(--shadow-soft)
-    }
-    .card h3{margin:0 0 8px;font-size:16px}
-    .kpi{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    .pill{padding:6px 10px;font-size:12px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted);border:1px solid rgba(255,255,255,.08)}
-    .list{margin:10px 0 0;padding-left:20px;color:var(--muted)}
-    .list li{margin:6px 0}
-
-    /* Roadmap */
-    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-    @media (max-width: 940px){.grid-2{grid-template-columns:1fr}}
-    .timeline{
-      position:relative;padding:10px 0 10px 28px;border-left:2px dashed rgba(255,255,255,.15);
-    }
-    .milestone{
-      position:relative;margin:0 0 24px;padding-left:8px
-    }
-    .dot{
-      position:absolute;left:-31px;top:4px;width:14px;height:14px;border-radius:50%;
-      background:linear-gradient(90deg,#6ee7f9,#7c5cff);box-shadow:0 0 0 4px rgba(124,92,255,.15);
-      border:2px solid #0b1020;
-    }
-    .ms-title{font-weight:700;margin:0}
-    .ms-meta{font-size:12px;color:var(--muted);margin:4px 0 8px}
-    .stack{display:grid;gap:14px}
-    .stack .card h4{margin:0 0 6px}
     .tiny{font-size:12px;color:var(--muted)}
 
-    /* Footer */
-    footer{
-      margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
-    }
+    /* Two‑column section */
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    @media (max-width: 940px){.grid-2{grid-template-columns:1fr}}
+
+    /* Timeline */
+    .timeline{position:relative;padding:10px 0 10px 28px;border-left:2px dashed rgba(255,255,255,.15)}
+    .milestone{position:relative;margin:0 0 24px;padding-left:8px}
+    .dot{position:absolute;left:-31px;top:4px;width:14px;height:14px;border-radius:50%;
+         background:linear-gradient(90deg,#6ee7f9,#7c5cff);box-shadow:0 0 0 4px rgba(124,92,255,.15);border:2px solid #0b1020}
+    .ms-title{font-weight:700;margin:0}
+    .ms-meta{font-size:12px;color:var(--muted);margin:4px 0 8px}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- Brand row -->
+    <!-- Brand -->
     <div class="brand" role="banner" aria-label="AI‑RMM">
-      <img src="logo.png" width="1500" alt="AI‑RMM logo" />
+      <img src="logo.png" alt="AI‑RMM logo" />
       <h1>AI‑RMM • Artificial Intelligence Resilience Maturity Model</h1>
       <div class="badges">
         <span class="badge">Version 0.1</span>
@@ -168,7 +140,7 @@
     </nav>
 
     <section class="panels">
-      <!-- PANEL 1: Landing / Overview -->
+      <!-- PANEL 1: Overview -->
       <article class="panel active" role="tabpanel" id="panel-home" aria-labelledby="tab-home">
         <div class="hero">
           <div>
@@ -179,7 +151,8 @@
               anticipate, withstand, recover from, and adapt to AI‑related disruption.
             </p>
             <p class="lead">
-              The model uses five maturity levels (Initial → Optimizing) and aligns with the NIST AI Risk Management Framework. It turns broad principles into actionable controls and a clear path to progress.
+              The model uses five maturity levels (Initial → Optimizing) and aligns with the NIST AI Risk Management Framework.
+              It turns broad principles into actionable controls and a clear path to progress.
             </p>
 
             <div class="cards" aria-label="What you’ll find">
@@ -195,12 +168,10 @@
               </div>
               <div class="card">
                 <h3>Four core functions</h3>
-                <div class="kpi">
-                  <span class="pill">🏛️ GOVERN</span>
-                  <span class="pill">🗺️ MAP</span>
-                  <span class="pill">📊 MEASURE</span>
-                  <span class="pill">⚙️ MANAGE</span>
-                </div>
+                <div class="pill">🏛️ GOVERN</div>
+                <div class="pill" style="margin-top:6px">🗺️ MAP</div>
+                <div class="pill" style="margin-top:6px">📊 MEASURE</div>
+                <div class="pill" style="margin-top:6px">⚙️ MANAGE</div>
                 <ul class="list">
                   <li>Policy, accountability & culture</li>
                   <li>System context & categorization</li>
@@ -220,9 +191,8 @@
           </div>
 
           <div class="hero-visual" aria-label="Get started">
-            <img src="rmm.gif" alt="AI-RMM demo"
-			     style="max-width:100%;width:700px;height:auto;display:block;margin:10px auto 18px;border-radius:14px"/>
-
+            <!-- Larger GIF preview -->
+            <img class="hero-gif" src="rmm.gif" alt="AI‑RMM overview demo" />
             <p class="lead" style="text-align:center">
               Ready to benchmark your current posture and generate an action plan?
             </p>
@@ -233,79 +203,64 @@
             <p class="tiny" style="text-align:center;margin-top:10px">
               Tip: You can save progress locally and export a report at any time.
             </p>
-			
-			
           </div>
-		  
 		  <div class="hero-visual" aria-label="Get started">
-				<p class="lead" style="text-align:center">
 				<h3> Licence </h3>
-				  © 2025 Yiannis Pavlosoglou. Licensed under GPL v3.0. See the project on <a  href="https://osf.io/kb8a5/" target="_blank" rel="noopener">OSF</a> for source artifacts.
+				<p class="lead" style="text-align:center">
+				© 2025 Yiannis Pavlosoglou. Licensed under GPL v3.0. See the project on <a  href="https://osf.io/kb8a5/" target="_blank" rel="noopener">OSF</a> for source artifacts.
 				</p>
 			</div>
 			
 			<div class="hero-visual" aria-label="Get started">
 				<h3> Contributors </h3>
 				<p class="lead" style="text-align:center">
-				Core work by the author with contributions from: Alice Milshtein, Athanasios Mylonopoulos, Athanasios Staveris.
+				  Core work by the author with contributions from: Alice Milshtein, Athanasios Mylonopoulos, Athanasios Staveris.
 				</p>
 			</div>
-		  
-		  
 		  
         </div>
       </article>
 
-      <!-- PANEL 2 goto the assessment. 
+      <!-- PANEL 2: Assessment (robust, simple iframe) -->
       <article class="panel" role="tabpanel" id="panel-assess" aria-labelledby="tab-assess">
         <div class="card" style="margin-bottom:16px">
           <h3 style="margin:0 0 6px">AI‑RMM Assessment</h3>
           <p class="tiny">Interactive dashboard with maturity questions, analytics, and export options.</p>
         </div>
         <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow-soft);">
-		  <iframe id="assessFrame" title="AI‑RMM Assessment"
-		          style="width:100%;height:78vh;border:0;background:#fff"></iframe>
-		</div>
-		<div id="assessError" class="tiny" style="display:none;margin-top:8px;color:#f8a6a6">
-		  Couldn’t load the assessment. <a id="assessOpenRaw" href="#" target="_blank" rel="noopener">Open it directly</a>.
-		</div>
+          <iframe
+            src="./airmm.html"
+            title="AI‑RMM Assessment"
+            style="width:100%;height:78vh;border:0;background:#fff"></iframe>
+        </div>
+        <noscript><p class="tiny" style="margin-top:8px;color:#f8a6a6">Enable JavaScript to view the assessment.</p></noscript>
       </article>
 
       <!-- PANEL 3: Orientation & Roadmap -->
       <article class="panel" role="tabpanel" id="panel-roadmap" aria-labelledby="tab-roadmap">
         <div class="grid-2">
           <!-- Orientation / Controls map -->
-          <div class="stack" aria-label="Controls orientation">
+          <div>
             <div class="card">
-              <h4>Controls Orientation — where to start</h4>
+              <h3>Controls orientation — where to start</h3>
               <p class="lead">
-                Use this quick map to sequence your rollout. Establish policy and roles first, then build system understanding, measurement, and operational response.
+                Establish policy and roles first, then build system understanding, measurement, and operational response.
               </p>
               <ul class="list">
-                <li><strong>🏛️ GOVERN:</strong> policies, accountability, inventory, oversight culture.</li>
-                <li><strong>🗺️ MAP:</strong> purposes, users, context, categorization, scope & benefits/costs.</li>
-                <li><strong>📊 MEASURE:</strong> TEVV, safety, bias/fairness, privacy, sustainability, risk tracking.</li>
-                <li><strong>⚙️ MANAGE:</strong> prioritization, incident response, disengagement “kill‑switch”, third‑party risks.</li>
+                <li><strong>🏛️ GOVERN:</strong> policies, accountability, inventory, oversight culture</li>
+                <li><strong>🗺️ MAP:</strong> purposes, users, context, categorization, scope & benefits/costs</li>
+                <li><strong>📊 MEASURE:</strong> TEVV, safety, bias/fairness, privacy, reliability, risk tracking</li>
+                <li><strong>⚙️ MANAGE:</strong> prioritization, incident response, disengagement, third‑party risks</li>
               </ul>
             </div>
 
             <div class="card">
-              <h4>Recommended evidence by level</h4>
+              <h3>Recommended evidence by level</h3>
               <ul class="list">
-                <li><strong>Level 1 → 2:</strong> basic policies, role definitions, initial inventory, incident plan outline.</li>
-                <li><strong>Level 2 → 3:</strong> standardized procedures, training, context docs, oversight mechanisms.</li>
-                <li><strong>Level 3 → 4:</strong> KPIs & thresholds, monitoring dashboards, periodic evaluations.</li>
-                <li><strong>Level 4 → 5:</strong> continuous improvement cycles, predictive analyses, program reviews.</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h4>Quick wins (first 30–60 days)</h4>
-              <ul class="list">
-                <li>Form an executive‑sponsored AI risk council with clear mandates</li>
-                <li>Create an AI system inventory with risk tiers and owners</li>
-                <li>Adopt minimum safety & oversight criteria for all AI use cases</li>
-                <li>Document a rapid disengagement procedure (“big red button”)</li>
+                <li><strong>Level 1 → 2:</strong> basic policies, role definitions, initial inventory, incident plan outline</li>
+                <li><strong>Level 2 → 3:</strong> standardized procedures, training, context docs, oversight mechanisms</li>
+                <li><strong>Level 3 → 4:</strong> KPIs & thresholds, monitoring dashboards, periodic evaluations</li>
+                <li><strong>Level 4 → 5:</strong> continuous improvement cycles, predictive analyses, program reviews</li>
               </ul>
             </div>
           </div>
@@ -313,7 +268,7 @@
           <!-- Timeline / Roadmap -->
           <div>
             <div class="card" style="margin-bottom:16px">
-              <h4>Roadmap — evolve with confidence</h4>
+              <h3>Roadmap — evolve with confidence</h3>
               <p class="tiny">A pragmatic sequence you can adapt to your scale and risk appetite.</p>
             </div>
             <div class="timeline" aria-label="Timeline roadmap">
@@ -370,113 +325,52 @@
   </div>
 
   <script>
-  // Simple tabs (safer)
-  const tabs = Array.from(document.querySelectorAll('.tab'));
-  const panels = {
-    home: document.getElementById('panel-home'),
-    assess: document.getElementById('panel-assess'),
-    roadmap: document.getElementById('panel-roadmap')
-  };
+    // Tabs (defensive & accessible)
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const panels = {
+      home: document.getElementById('panel-home'),
+      assess: document.getElementById('panel-assess'),
+      roadmap: document.getElementById('panel-roadmap')
+    };
 
-  function setActive(id) {
-    // 1) Update aria-selected on tabs
-    tabs.forEach(t => t.setAttribute('aria-selected', String(t.id === 'tab-' + id)));
+    function setActive(id){
+      // update tabs
+      tabs.forEach(t => t.setAttribute('aria-selected', String(t.id === 'tab-' + id)));
+      // update panels (skip any nulls)
+      Object.entries(panels).forEach(([k, el])=>{
+        if(!el) return;
+        el.classList.toggle('active', k === id);
+        el.setAttribute('aria-hidden', String(k !== id));
+      });
+      // focus active tab
+      const btn = document.getElementById('tab-' + id);
+      if(btn && btn.focus) btn.focus({preventScroll:true});
+      // optional hash
+      history.replaceState(null, '', '#'+id);
+      // scroll to top for small screens
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
 
-    // 2) Toggle panels (skip nulls to avoid crashes)
-    Object.entries(panels).forEach(([k, el]) => {
-      if (!el) return; // guard: panel missing
-      el.classList.toggle('active', k === id);
-      el.setAttribute('aria-hidden', String(k !== id));
+    // Wire tab clicks + keyboard
+    tabs.forEach((btn, i)=>{
+      btn.addEventListener('click', ()=> setActive(btn.id.replace('tab-','')));
+      btn.addEventListener('keydown', e=>{
+        if(e.key==='ArrowRight' || e.key==='ArrowLeft'){
+          e.preventDefault();
+          const dir = e.key==='ArrowRight' ? 1 : -1;
+          const next = (i + dir + tabs.length) % tabs.length;
+          tabs[next].click();
+        }
+      });
     });
 
-    // 3) Focus the active tab if present
-    const btn = document.getElementById('tab-' + id);
-    if (btn && typeof btn.focus === 'function') {
-      btn.focus({ preventScroll: true });
-    }
-  }
+    // CTA → Assessment
+    const go = document.getElementById('go-assessment');
+    if(go) go.addEventListener('click', ()=> setActive('assess'));
 
-  // Wire events
-  tabs.forEach((btn, i) => {
-    btn.addEventListener('click', () => setActive(btn.id.replace('tab-','')));
-    btn.addEventListener('keydown', e => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-        e.preventDefault();
-        const dir = e.key === 'ArrowRight' ? 1 : -1;
-        const next = (i + dir + tabs.length) % tabs.length;
-        tabs[next].click();
-      }
-    });
-  });
-
-  // CTA jumps to Assessment (guard if missing)
-  const cta = document.getElementById('go-assessment');
-  if (cta) cta.addEventListener('click', () => setActive('assess'));
-
-  // Initialize to the currently marked tab or default to 'home'
-  const initiallySelected = tabs.find(t => t.getAttribute('aria-selected') === 'true');
-  setActive(initiallySelected ? initiallySelected.id.replace('tab-','') : 'home');
-
-
-	  async function loadAssessmentIntoFrame() {
-    const frame = document.getElementById('assessFrame');
-    const err = document.getElementById('assessError');
-    const raw = document.getElementById('assessOpenRaw');
-
-    // Resolve the correct absolute URL (works on GitHub Pages subpaths)
-    const url = new URL('airmm.html', location.href).toString();
-    raw.href = url;
-
-    try {
-      // Fetch the HTML so we can inject a <base> for relative assets
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const html = await res.text();
-
-      // Compute a base href so relative paths in airmm.html keep working
-      const baseHref = url.substring(0, url.lastIndexOf('/') + 1);
-
-      // Inject via srcdoc (avoids some iframe path/caching quirks)
-      frame.srcdoc = `<!doctype html>
-<html>
-<head><base href="${baseHref}"></head>
-<body>
-${html}
-</body></html>`;
-      err.style.display = 'none';
-    } catch (e) {
-      console.error('Assessment load failed:', e);
-      // Fallback: try direct src (in case fetch is blocked)
-      frame.removeAttribute('srcdoc');
-      frame.src = url;
-      // Show a helpful message + direct link
-      err.style.display = 'block';
-    }
-  }
-
-  // Lazy‑load only when the Assessment tab is shown (and only once)
-  let assessmentLoaded = false;
-  const originalSetActive = (id => window.setActive)(/* keep a ref */);
-  window.setActive = function(id) {
-    originalSetActive(id);
-    if (id === 'assess' && !assessmentLoaded) {
-      assessmentLoaded = true;
-      loadAssessmentIntoFrame();
-    }
-  };
-
-  // Also load immediately if the page opens on the Assessment tab
-  if (document.querySelector('#panel-assess.panel.active')) {
-    assessmentLoaded = true;
-    loadAssessmentIntoFrame();
-  }
-</script>
-</script>
-
+    // Initial tab by hash
+    const start = (location.hash || '#home').replace('#','');
+    setActive(['home','assess','roadmap'].includes(start) ? start : 'home');
+  </script>
 </body>
 </html>
-
-
-
-
-
