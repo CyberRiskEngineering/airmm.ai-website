@@ -25,7 +25,31 @@
       background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,0));
       position:sticky; top:0; z-index:10; backdrop-filter:saturate(120%) blur(6px);
     }
-    .brand{display:flex; align-items:center; gap:12px}
+	
+	/* Overview */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+    @media (max-width: 940px){.hero{grid-template-columns:1fr}}
+    .lead{color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 0 10px}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+    @media (max-width: 940px){.cards{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);padding:18px;border-radius:16px;box-shadow:var(--shadow-soft)}
+    .card h3{margin:0 0 8px;font-size:16px}
+    .pill{padding:6px 10px;font-size:12px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--muted);border:1px solid rgba(255,255,255,.08)}
+    .list{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+    .list li{margin:6px 0}
+
+    .hero-visual{
+      background:radial-gradient(500px 220px at 50% -50%, rgba(108,99,255,.35), transparent 60%),
+                 linear-gradient(180deg, rgba(124,92,255,.12), rgba(110,231,249,.08));
+      border:1px solid rgba(255,255,255,.10);border-radius:var(--radius-xl);padding:24px;box-shadow:var(--shadow-soft)
+    }
+    /* Bigger, responsive GIF */
+    .hero-visual img.hero-gif{
+      display:block;margin:10px auto 18px;border-radius:16px;object-fit:cover;
+      max-width:100%;width:720px;height:auto;
+    }
+	
+	
     .brand .title h1{margin:0; font-size:18px; font-weight:800}
     .brand .title small{color:var(--muted)}
     .actions{display:flex; align-items:center; gap:8px}
@@ -83,12 +107,10 @@
     .kpi .num{font-size:24px; font-weight:800}
     .muted{color:var(--muted)}
 
-    @media print{
-      header, aside, .tabs, .actions{display:none!important}
-      .app{grid-template-columns:1fr; gap:0; padding:0}
-      .panel.active{display:block}
-      .card, .controls-wrap{break-inside:avoid}
-      body{background:#fff; color:#000}
+    @media (max-width: 960px){
+      .app{grid-template-columns:1fr}
+      aside{order:2}
+      main{order:1}
     }
   </style>
 </head>
@@ -97,11 +119,11 @@
     <div class="brand" aria-label="AIRMM">
       <div class="title">
         <h1>AIRMM Assessment</h1>
-        <small>v0.2 • Interactive questionnaire & dashboard</small>
+        <small>v0.2 • Interactive questionnaire, dashboard & summary</small>
       </div>
     </div>
     <div class="actions">
-      <!-- Save JSON only (no PDF, no history) -->
+      <!-- Save JSON only -->
       <button class="btn primary" id="btnExportJSON" title="Save current responses as JSON">Save JSON</button>
     </div>
   </header>
@@ -117,42 +139,95 @@
 
     <main>
       <div class="tabs">
-        <button class="tab active" data-target="#panel-questions">Questionnaire</button>
+        <button class="tab active" data-target="#panel-summary">Summary</button>
+        <button class="tab" data-target="#panel-questions">Questionnaire</button>
         <button class="tab" data-target="#panel-dashboard">Dashboard</button>
       </div>
 
       <section class="panels">
-        <div class="panel active" id="panel-questions">
+        <!-- SUMMARY TAB -->
+        <div class="panel active" id="panel-summary">
+          <div class="card" style="grid-column: span 6">
+				<img  src="rmm.gif" alt="AI‑RMM overview demo" />
+			</div>
+		
+		  <div class="grid" style="padding:16px">
+            
+			
+			
+			<div class="card" style="grid-column: span 6">
+              <h2 style="margin:0 0 8px">What is the AI Resilience Maturity Model (AI-RMM)?</h2>
+              <p class="muted" id="summaryVersion">
+				  Framework version: <span id="sumVersion">—</span> 
+				  Generated: <span id="sumGenAt">—</span>
+			  </p>
+              <p>
+                The AI-RMM is a practical framework for governing AI risk across the full lifecycle. It organizes controls into four functions—<strong>GOVERN, MAP, MEASURE, MANAGE</strong>—and five maturity levels from <em>Initial</em> to <em>Optimizing</em>. Each function is broken into categories, sub-categories, and specific controls that guide organizations from basic, ad-hoc practices to evidence-based, continuously improving ones.
+				
+              </p>
+
+            </div>
+			
+			
+			
+            <div class="card" style="grid-column: span 6">
+              <h3 style="margin:4px 0 8px">Structure</h3>
+              <ul id="summaryStructure" class="muted" style="line-height:1.6;margin:0;padding-left:18px">
+                <!-- filled by JS from JSON -->
+              </ul>
+            </div>
+
+            <div class="card" style="grid-column: span 6">
+              <h3 style="margin:4px 0 8px">Maturity Levels (L1–L5)</h3>
+              <ol class="muted" style="line-height:1.6;margin:0;padding-left:18px">
+                <li><strong>Initial</strong> — basic, reactive practices.</li>
+                <li><strong>Managed</strong> — defined activities and recurring routines.</li>
+                <li><strong>Defined</strong> — standardized, documented processes.</li>
+                <li><strong>Quantitatively Managed</strong> — metrics-driven monitoring and adaptation.</li>
+                <li><strong>Optimizing</strong> — continuous improvement embedded in culture.</li>
+              </ol>
+            </div>
+
+            <div class="card" style="grid-column: span 12">
+              <h3 style="margin:4px 0 8px">How to use this assessment</h3>
+              <ol class="muted" style="line-height:1.7; padding-left:18px; margin:0">
+                <li>Select a function from the left sidebar. Each sub-category lists controls under Levels 1–5.</li>
+                <li>For each control, choose <strong>Yes / Partial / No / N/A</strong>. Items start as <span style="color:var(--danger);font-weight:800">PENDING</span> and flip to <span style="color:var(--ok);font-weight:800">ANSWERED</span> once you select an option.</li>
+                <li>Use the Dashboard to view distribution, domain scores, and a heatmap. Click a bar/cell to drill down; double-click to jump into the relevant questions.</li>
+                <li>Click <strong>Save JSON</strong> to export your responses at any time.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUESTIONS TAB -->
+        <div class="panel" id="panel-questions">
           <div class="controls-wrap" id="controlsWrap"></div>
         </div>
 
-        <!-- Compact dashboard with inline SVG (non-expanding) -->
+        <!-- DASHBOARD TAB (compact, inline charts) -->
         <div class="panel" id="panel-dashboard">
           <div class="grid" style="padding:16px">
             <div class="card" style="grid-column: span 12">
               <div class="kpis" id="kpiRow"></div>
             </div>
 
-            <!-- Stacked distribution bar -->
             <div class="card" style="grid-column: span 6; min-height:160px">
               <h3 style="margin:4px 0 12px">Answers Distribution</h3>
               <div id="distBar" style="width:100%; border:1px solid var(--border); border-radius:10px; overflow:hidden; height:22px; display:flex"></div>
               <div id="distLegend" style="display:flex; gap:12px; margin-top:10px; font-size:12px" class="muted"></div>
             </div>
 
-            <!-- Domain scores (inline SVG bar chart) -->
             <div class="card" style="grid-column: span 6; min-height:220px">
               <h3 style="margin:4px 0 12px">Domain Scores (click to drill down)</h3>
               <div id="domainChartBox" style="width:100%; height:180px"></div>
             </div>
 
-            <!-- Clickable Heatmap -->
             <div class="card" style="grid-column: span 12; min-height:160px">
               <h3 style="margin:4px 0 12px">Heatmap (Yes / Partial / No)</h3>
               <div id="heatmap" class="heat" style="display:grid; grid-template-columns:repeat(6,1fr); gap:6px"></div>
             </div>
 
-            <!-- Drill-down details -->
             <div class="card" style="grid-column: span 12">
               <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
                 <h3 id="detailTitle" style="margin:4px 0 12px">Details</h3>
@@ -208,7 +283,7 @@
     });
   })();
 
-  // Core state (no history/IndexedDB/PDF)
+  // Core state
   const AIRMM_STATE={ meta:{}, functions:{}, answers:{}, activeFunc:null, search:'', selectedFunc:null };
   const $=(s,r=document)=>r.querySelector(s); const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
   const el=(t,a={},ch=[])=>{ const n=document.createElement(t); for(const [k,v] of Object.entries(a)){
@@ -227,7 +302,7 @@
       const node=el('div',{class:'domain'+(AIRMM_STATE.activeFunc===fKey?' active':''),'data-func':fKey},[
         el('div',{},[ el('div',{class:'lab'},[document.createTextNode(fObj.name||fKey)]), el('small',{},[document.createTextNode(`${answered}/${total}`)]) ])
       ]);
-      node.addEventListener('click',()=>{ AIRMM_STATE.activeFunc=fKey; AIRMM_STATE.selectedFunc=fKey; renderAll(); setActivePanel('#panel-dashboard'); });
+      node.addEventListener('click',()=>{ AIRMM_STATE.activeFunc=fKey; AIRMM_STATE.selectedFunc=fKey; renderAll(); setActivePanel('#panel-summary'); });
       list.appendChild(node);
     });
   }
@@ -250,7 +325,23 @@
     const pref=fKey+'|'; return Object.keys(AIRMM_STATE.answers).filter(k=>k.startsWith(pref)).length;
   }
 
-  // Questionnaire render (with status badge)
+  // SUMMARY content
+  function populateSummary(){
+    $('#sumVersion').textContent = AIRMM_STATE.meta.version || '—';
+    $('#sumGenAt').textContent = AIRMM_STATE.meta.date || '—';
+
+    const ul = $('#summaryStructure'); if(!ul) return;
+    ul.innerHTML = '';
+    Object.entries(AIRMM_STATE.functions).forEach(([fKey,fObj])=>{
+      const cats = Object.keys(fObj.categories||{}).length;
+      const subs = Object.values(fObj.categories||{}).reduce((s,c)=> s + Object.keys(c.subcategories||{}).length, 0);
+      ul.appendChild(el('li',{},[
+        el('span',{},[ (fObj.name||fKey) + ` — ${cats} categories, ${subs} sub-categories` ])
+      ]));
+    });
+  }
+
+  // Questionnaire render with status
   function renderControls(){
     const wrap=getControlsWrap(); if(!wrap) return; wrap.innerHTML='';
     const fKey=AIRMM_STATE.activeFunc; const fn=AIRMM_STATE.functions[fKey]; if(!fn){ wrap.innerHTML='<p>No data.</p>'; return; }
@@ -271,22 +362,20 @@
             const hay=`${cId} ${cDesc}`.toLowerCase(); if(AIRMM_STATE.search && !hay.includes(AIRMM_STATE.search)) return;
             const qKey=`${fKey}|${catKey}|${subKey}|${L}|${idx}`; const val=AIRMM_STATE.answers[qKey]||'';
             const sq=el('div',{class:'sub-question'});
-            // Title + status badge
+
             const titleRow=el('div',{style:'display:flex; align-items:center; justify-content:space-between; gap:8px'});
             titleRow.appendChild(el('div',{class:'sq-title'},[`${cId} — ${cDesc}`]));
             const status=el('span',{class:'sq-status', style:`font-size:12px; font-weight:800; ${val? 'color: var(--ok)':'color: var(--danger)'};`},[ val? 'ANSWERED':'PENDING' ]);
             titleRow.appendChild(status);
             sq.appendChild(titleRow);
-            // Answers chips
+
             const answers=el('div',{class:'answers'});
             ['yes','partial','no','na'].forEach(v=>{
               const chip=el('button',{class:'chip'+(val===v?' active':''),'data-q':qKey,'data-value':v},[v.toUpperCase()]);
               chip.addEventListener('click',()=>{
                 AIRMM_STATE.answers[qKey]=v;
                 answers.querySelectorAll('.chip').forEach(ch=>ch.classList.toggle('active',ch===chip));
-                // flip status -> ANSWERED green
-                status.textContent='ANSWERED';
-                status.style.color='var(--ok)';
+                status.textContent='ANSWERED'; status.style.color='var(--ok)';
                 updateDashboard();
               });
               answers.appendChild(chip);
@@ -300,71 +389,47 @@
     });
   }
 
-  // KPI & dashboard helpers
+  // TALLIES (scoped to selected/active function → Coverage ≤ 100%)
   function overallTallies(scopeKey = AIRMM_STATE.selectedFunc || AIRMM_STATE.activeFunc){
-  const t = { yes:0, partial:0, no:0, na:0, all:0, answered:0 };
-
-  // Denominator: total questions in scope
-  if (scopeKey) {
-    t.all = countFunctionQuestions(scopeKey);
-  } else {
-    t.all = Object.keys(AIRMM_STATE.functions)
-      .reduce((s,k)=> s + countFunctionQuestions(k), 0);
+    const t = { yes:0, partial:0, no:0, na:0, all:0, answered:0 };
+    if (scopeKey) {
+      t.all = countFunctionQuestions(scopeKey);
+    } else {
+      t.all = Object.keys(AIRMM_STATE.functions).reduce((s,k)=> s + countFunctionQuestions(k), 0);
+    }
+    let entries = Object.entries(AIRMM_STATE.answers);
+    if (scopeKey) entries = entries.filter(([k]) => k.startsWith(scopeKey + '|'));
+    for (const [, v] of entries) {
+      if (v==='yes') t.yes++; else if (v==='partial') t.partial++; else if (v==='no') t.no++; else if (v==='na') t.na++;
+    }
+    t.answered = entries.length;
+    return t;
   }
 
-  // Numerator: answers only from the same scope
-  let entries = Object.entries(AIRMM_STATE.answers);
-  if (scopeKey) {
-    entries = entries.filter(([k]) => k.startsWith(scopeKey + '|'));
-  }
-
-  for (const [, v] of entries) {
-    if (v === 'yes') t.yes++;
-    else if (v === 'partial') t.partial++;
-    else if (v === 'no') t.no++;
-    else if (v === 'na') t.na++;
-  }
-  t.answered = entries.length;
-  return t;
-}
-
-
+  // KPIs
   function renderKPIs(){
-  const row = $('#kpiRow'); if(!row) return;
-  const t = overallTallies();  // now properly scoped
-  const coveragePct = t.all ? Math.round(100 * t.answered / t.all) : 0;
+    const row=$('#kpiRow'); if(!row) return; const t=overallTallies(); row.innerHTML='';
+    const coveragePct = t.all ? Math.round(100 * t.answered / t.all) : 0; // counts N/A as answered
+    const blocks=[ ['Yes',t.yes], ['Partial',t.partial], ['No',t.no], ['N/A',t.na], ['Answered',t.answered], ['Coverage', coveragePct + '%'] ];
+    blocks.forEach(([label,val])=>{
+      const n=el('div',{class:'kpi'},[ el('h5',{},[label]), el('div',{class:'num'},[String(val)]) ]);
+      row.appendChild(n);
+    });
+  }
 
-  row.innerHTML = '';
-  [
-    ['Yes', t.yes],
-    ['Partial', t.partial],
-    ['No', t.no],
-    ['N/A', t.na],
-    ['Answered', t.answered],
-    ['Coverage', coveragePct + '%']
-  ].forEach(([label,val])=>{
-    const n = el('div',{class:'kpi'},[
-      el('h5',{},[label]),
-      el('div',{class:'num'},[ String(val) ])
-    ]);
-    row.appendChild(n);
-  });
-}
-
-  // Distribution stacked bar (non-expanding)
+  // Distribution stacked bar
   function renderDistribution(){
     const bar=$('#distBar'); const legend=$('#distLegend'); if(!bar||!legend) return;
     const t=overallTallies(); const total=(t.yes+t.partial+t.no+t.na)||1;
-    bar.innerHTML='';
+    bar.innerHTML=''; legend.innerHTML='';
     const mkSeg=(count,label,bg)=>{ const w=Math.round(100*count/total); const seg=el('div',{style:`height:100%; width:${w}%; background:${bg};`}); bar.appendChild(seg); legend.appendChild(el('div',{},[label,': ',String(count),' (',String(w),'%)'])); };
-    legend.innerHTML='';
     mkSeg(t.yes,'Yes','rgba(34,197,94,.6)');
     mkSeg(t.partial,'Partial','rgba(245,158,11,.6)');
     mkSeg(t.no,'No','rgba(255,107,107,.6)');
     mkSeg(t.na,'N/A','rgba(153,163,179,.6)');
   }
 
-  // Domain scores chart (inline SVG bars; fixed height/width)
+  // Domain scores chart (inline SVG bars)
   function renderDomainChart(){
     const box=$('#domainChartBox'); if(!box) return; box.innerHTML='';
     const keys=Object.keys(AIRMM_STATE.functions); if(keys.length===0){ box.textContent='No data'; return; }
@@ -378,13 +443,10 @@
     });
     const W=box.clientWidth||600, H=180, pad=28, n=values.length;
     const colW = Math.max(12, (W - pad*2) / (n*1.6));
-    const gap = colW*0.6;
-    const max=100;
-
+    const gap = colW*0.6, max=100;
     const svgNS='http://www.w3.org/2000/svg';
     const svg=document.createElementNS(svgNS,'svg');
     svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    // axis
     const axis=document.createElementNS(svgNS,'line');
     axis.setAttribute('x1', pad); axis.setAttribute('y1', H-pad);
     axis.setAttribute('x2', W-pad); axis.setAttribute('y2', H-pad);
@@ -419,7 +481,6 @@
       svg.appendChild(valText);
     });
 
-    // gradient
     const defs=document.createElementNS(svgNS,'defs');
     const lg=document.createElementNS(svgNS,'linearGradient');
     lg.setAttribute('id','grad'); lg.setAttribute('x1','0'); lg.setAttribute('y1','0'); lg.setAttribute('x2','0'); lg.setAttribute('y2','1');
@@ -497,11 +558,9 @@
   function renderDetail(){
     const fKey=AIRMM_STATE.selectedFunc||Object.keys(AIRMM_STATE.functions)[0]; if(!fKey) return;
     const fn=AIRMM_STATE.functions[fKey]; $('#detailTitle').textContent = (fn?.name||fKey)+' — Details';
-    // Level summary
     const sum=computeLevelSummary(fKey); const row=$('#levelSummary'); row.innerHTML='';
     [['Level 1',sum[1]],['Level 2',sum[2]],['Level 3',sum[3]],['Level 4',sum[4]],['Level 5',sum[5]],['Total',sum.total]]
       .forEach(([lab,val])=> row.appendChild(el('div',{class:'kpi'},[el('h5',{},[lab]), el('div',{class:'num'},[String(val)])])));
-    // Category table
     const tb=$('#detailTbody'); tb.innerHTML=''; const rows=computeCategoryRows(fKey);
     rows.forEach(r=>{
       const tr=document.createElement('tr');
@@ -522,11 +581,10 @@
       });
       tb.appendChild(tr);
     });
-    // Recent answers
     const recentBox=$('#recentAnswers'); recentBox.innerHTML='';
     const recent=Object.entries(AIRMM_STATE.answers).filter(([k])=>k.startsWith(fKey+'|')).slice(-12).reverse();
     recent.forEach(([k,v])=>{
-      const [_,catKey,subKey,L,idx]=k.split('|');
+      const [_,catKey,subKey,L]=k.split('|');
       const chip=el('button',{class:'btn',title:'Go to question',style:'white-space:nowrap; overflow:hidden; text-overflow:ellipsis'},[
         `${subKey} • L${L} • ${v.toUpperCase()}`
       ]);
@@ -542,7 +600,7 @@
   function updateDashboard(){
     renderKPIs(); renderDistribution(); renderDomainChart(); renderHeatmap(); renderFunctionList(); renderDetail();
   }
-  function renderAll(){ renderFunctionList(); renderControls(); updateDashboard(); }
+  function renderAll(){ renderFunctionList(); renderControls(); populateSummary(); updateDashboard(); }
 
   // Search & Save JSON
   document.getElementById('searchInput')?.addEventListener('input', (e)=>{ AIRMM_STATE.search=(e.target.value||'').toLowerCase(); renderControls(); });
@@ -563,11 +621,11 @@
       const data=await res.json();
       if(data.functions){
         AIRMM_STATE.meta.version=data.metadata?.version||data.version||'v0.2';
-        AIRMM_STATE.meta.generated_at=data.metadata?.generated_at||data.generated_at||'';
+        AIRMM_STATE.meta.date=data.metadata?.date||data.date||'';
         AIRMM_STATE.functions=data.functions||{};
       }else if(data.controls){
         AIRMM_STATE.meta.version=data.version||'v0.2';
-        AIRMM_STATE.meta.generated_at=data.generated_at||'';
+        AIRMM_STATE.meta.date=data.date||'';
         AIRMM_STATE.functions=Object.fromEntries(Object.keys(data.controls).map(k=>[
           k,{ name:k, categories:{ general:{ name:'General', subcategories:Object.fromEntries(
             Object.entries(data.controls[k]||{}).map(([cid,obj])=>[cid,{ name: obj.title||cid, controls: obj.levels||{} }])
@@ -597,4 +655,3 @@
   </script>
 </body>
 </html>
-
