@@ -1,0 +1,4449 @@
+{
+  "metadata": {
+    "framework_name": "AI Resilience Maturity Model (AI-RMM)",
+    "version": "0.2",
+    "date": "22 August 2025",
+    "description": "A conceptual framework used to assess, measure, and improve the resilience of organizations using or planning to use Artificial Intelligence (AI).",
+    "maturity_levels": {
+      "1": {
+        "name": "Initial",
+        "description": "1) ..........................................................................................................................13 4.2"
+      },
+      "2": {
+        "name": "Managed",
+        "description": "2) ...................................................................................................................14 4.3"
+      },
+      "3": {
+        "name": "Defined",
+        "description": "3) ......................................................................................................................14 4.4"
+      },
+      "4": {
+        "name": "Quantitatively Managed",
+        "description": "4) ..........................................................................................14 4.5"
+      },
+      "5": {
+        "name": "Optimizing",
+        "description": "5) .................................................................................................................15"
+      }
+    },
+    "source_files": {
+      "pdf": "AI-RMM-Framework-v02.pdf",
+      "excel": "AI-RMM-Controls-v02.xlsx"
+    }
+  },
+  "functions": {
+    "GOVERN": {
+      "name": "GOVERN",
+      "categories": {
+        "1": {
+          "name": "Govern 1 - Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
+          "subcategories": {
+            "GOVERN_1_1": {
+              "name": "Govern 1.1 - Legal and regulatory requirements involving AI are understood, managed, and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 1.1.1.",
+                      "description": "Identify all applicable AI-related laws and regulations and on an ad-hoc basis have assessed the potential impact, taking action as necessary."
+                    },
+                    {
+                      "id": "Govern 1.1.2.",
+                      "description": "Assess the potential impact of these laws and regulations on organizations with AI systems."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.1.3",
+                      "description": "Develop and document basic compliance policies and procedures addressing applicable AI legal and regulatory requirements."
+                    },
+                    {
+                      "id": "Govern 1.1.4",
+                      "description": "Assign responsibilities for monitoring compliance with legal obligations across departments managing AI systems."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 1.1.5",
+                      "description": "Standardize and apply compliance procedures consistently across all AI systems and projects in the organization."
+                    },
+                    {
+                      "id": "Govern 1.1.6",
+                      "description": "Conduct regular, formal actions on AI-related policies, documenting findings and actions."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.1.7",
+                      "description": "Use key performance indicators (KPIs) and compliance metrics to document and track adherence to legal and regulatory AI requirements during assessments."
+                    },
+                    {
+                      "id": "Govern 1.1.8",
+                      "description": "Maintain a centralized compliance dashboard or system to track audit outcomes, and legal updates."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 1.1.9",
+                      "description": "Continuously improve at a regular predefined cadence, compliance procedures using feedback, legal trend analysis, and post-incident reviews related to AI systems."
+                    },
+                    {
+                      "id": "Govern 1.1.10",
+                      "description": "Proactively monitor changes in AI-related legislation and update internal policies before enforcement deadlines or regulatory shifts."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_1_2": {
+              "name": "Govern 1.2 - The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 1.2.1.",
+                      "description": "Identify and document the characteristics of trustworthy, responsible and ethical AI."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.2.2.",
+                      "description": "Define and Integrate the basic characteristics of trustworthy, responsible and ethical AI into organizational policies, processes, procedures"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 1.2.3",
+                      "description": "Consistently apply the characteristics of trustworthy, responsible and ethical AI into organizational controls and conduct Regular Compliance Assessments"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.2.4.",
+                      "description": "Use metrics and data to evaluate how well trustworthy, responsible, and ethical AI principles are being applied across the organization."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 1.2.5.",
+                      "description": "Monitor and update characteristics to align with emerging trustworthy AI practices and emerging risks"
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_1_3": {
+              "name": "Govern 1.3 - \nProcesses, procedures, and practices are in place to determine the needed level of risk management activities based on the organization’s risk tolerance. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 1.3.1",
+                      "description": "Identify and assess AI-related risks"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.3.2.",
+                      "description": "Prioritize and categorize AI risks and establish an organizational risk tolerance framework"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 1.3.3.",
+                      "description": "Develop and consistenly implement  risk mitigation strategies and establish a risk management governance structure"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.3.4.",
+                      "description": "Use metrics and data to monitor and manage AI risks."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 1.3.5.",
+                      "description": "Continuously monitor and update risk management controls."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_1_4": {
+              "name": "Govern 1.4 - \nThe risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 1.4.1.",
+                      "description": "Idenitfy \"adhoc\" risks and define risk management policies."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.4.2.",
+                      "description": "Implement structured risk management procedures."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 1.4.3.",
+                      "description": "Establish and consistently apply effective risk management controls and communication plans."
+                    },
+                    {
+                      "id": "Govern 1.4.4.",
+                      "description": "Establish a risk management communication plan."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.4.5.",
+                      "description": "Conduct regular risk management audits."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 1.4.6.",
+                      "description": "Integrate risk management into AI governance and optimize the risk management process"
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_1_5": {
+              "name": "Govern 1.5 - \nOngoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 1.5.1.",
+                      "description": "Define the generic scope and frequency of monitoring."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.5.2.",
+                      "description": "Define the scope and monitoring frequency across the organization."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 1.5.3.",
+                      "description": "Establish a monitoring and alerting system."
+                    },
+                    {
+                      "id": "Govern 1.5.4.",
+                      "description": "Assign clear roles and responsibilities on the frequency and scope of monitoring."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.5.5.",
+                      "description": "Document monitoring and review procedures."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 1.5.6.",
+                      "description": "Integrate monitoring and review into organizational workflows."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_1_6": {
+              "name": "Govern 1.6 - \nMechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 1.6.1.",
+                      "description": "Establish an inventory of AI systems used within organization"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.6.2.",
+                      "description": "Assess AI system risk levels."
+                    },
+                    {
+                      "id": "Govern 1.6.3.",
+                      "description": "Prioritize resource allocation."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 1.6.4.",
+                      "description": "Establish a risk-based staffing model."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.6.5.",
+                      "description": "Align risk management with business goals and use metrics and data to monitor and manage AI system risks"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 1.6.6.",
+                      "description": "Continuously evaluate and refine risk management processes."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_1_7": {
+              "name": "Govern 1.7 - \nProcesses and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization’s trustworthiness. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 1.7.1.",
+                      "description": "Identify AI systems for decommissioning or phasing out, without disclosing this information to any of the AI systems of the organization."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.7.2.",
+                      "description": "The organization shall establish and document formal procedures for the decommissioning and phasing out of AI systems. These procedures shall be applicable to all AI systems in the organization and not limited to a single system type or project. The procedures shall remain undisclosed to all AI systems. They shall include risk-based criteria for identifying systems to be retired, detailed plans for how to respond if AI systems exhibit adverse behaviors when retirement is initiated, traditional data archiving and migration processes, and clear assignment of responsibilities. The procedures shall be integrated into the organization’s AI governance framework (see Govern 1.3 on risk tolerance, Govern 1.4 on risk management processes, and Govern 1.6 on AI system inventory) to ensure alignment with strategic objectives. Implementation shall ensure that decommissioning activities do not introduce new risks or diminish organizational trustworthiness."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 1.7.3",
+                      "description": "The organization shall implement the decommissioning and phasing-out procedures consistently across all AI systems and projects. Execution shall remain outside the span of control of all AI systems, and procedures shall remain undisclosed to them. Execution shall be documented and auditable, with records of decisions, actions taken, and outcomes maintained, especially if AI systems detected or behaved against the decommissioning procedures. The procedures shall be periodically reviewed to ensure alignment with organizational strategy, AI governance, and evolving risk tolerance. Responsibilities shall be embedded into formal roles, and staff involved in AI lifecycle management shall receive training on decommissioning protocols. Secure communication channels independent of all AI Systems shall be established to ensure that decommissioning decisions and outcomes are understood by relevant stakeholders, while remaining undisclosed to AI systems. Implementation shall demonstrate consistent, repeatable, and organization-wide application that strengthens trustworthiness and resilience."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 1.7.4.",
+                      "description": "The organization shall conduct regular, structured security assessments of the decommissioning and phasing-out process to identify vulnerabilities and confirm that execution remains outside the span of control of AI systems. Metrics and key performance indicators (KPIs) shall be established to evaluate the effectiveness of security safeguards and stakeholder communication. Transparent reports shall be produced for relevant stakeholders to demonstrate assurance that decommissioning activities are secure, controlled, and aligned with organizational governance and risk tolerance."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 1.7.5.",
+                      "description": "The organization shall continuously monitor, evaluate, and improve decommissioning and phasing-out procedures using lessons learned, performance data, and emerging threat intelligence from AI systems. Improvements shall address both technical and organizational aspects, including resilience to evolving AI behaviors and risks. Feedback loops shall be established to refine policies, security controls, and training programs. The organization shall foster a culture of continuous improvement in decommissioning practices to ensure resilience, trustworthiness, and alignment with long-term AI governance objectives."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "name": "Govern 2 - Accountability structures are in place so that the appropriate teams and individuals are em- powered, responsible, and trained for mapping, measuring, and managing AI risks.",
+          "subcategories": {
+            "GOVERN_2_1": {
+              "name": "Govern 2.1\nRoles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 2.1.1.",
+                      "description": "Identify necessary roles and communication channels"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 2.1.2.",
+                      "description": "Define and Document Roles and Responsibilities and establish communication channels"
+                    },
+                    {
+                      "id": "Govern 2.1.2.",
+                      "description": "Establish Communication Channels."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 2.1.3.",
+                      "description": "Implement Training and Awareness Programs"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 2.1.4",
+                      "description": "Use metrics and data to assess and maintain roles and communication channels"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 2.1.5",
+                      "description": "Continuously evaluate and refine roles and responsibilities"
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_2_2": {
+              "name": "Govern 2.2\nThe organization’s personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 2.2.1.",
+                      "description": "Identify AI risks and tailor a Comprehensive AI Risk Management Training Program."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 2.2.4.",
+                      "description": "Integrate Training with Policies, Procedures, and Agreements."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 2.2.2.",
+                      "description": "Provide Regular Refresher Training."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 2.2.3.",
+                      "description": "Use metrics and data to evaluate training effectiveness."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 2.2.5.",
+                      "description": "Foster a Culture of Continuous Learning."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_2_3": {
+              "name": "Govern 2.3\nExecutive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 2.3.1.",
+                      "description": "Establish an AI Risk Management Leadership Council."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 2.3.2.",
+                      "description": "Develop a Clear and Comprehensive AI Risk Management Policy."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 2.3.3.",
+                      "description": "Integrate AI Risk Management into Strategic Planning and establish risk management approval process"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 2.3.5.",
+                      "description": "Establish a Risk Management Reporting Mechanism."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 2.3.6",
+                      "description": "Cintinuously evaluate and refine Ai Risk Management"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "name": "Govern 3 Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",
+          "subcategories": {
+            "GOVERN_3_1": {
+              "name": "Govern 3.1\nDecision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds). (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 3.1.1.",
+                      "description": "Foster a Culture of Inclusiveness."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 3.1.2.",
+                      "description": "Establish a Diverse Risk Management Team."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 3.1.3.",
+                      "description": "Leverage Diverse Perspectives in Risk Identification."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 3.1.4.",
+                      "description": "Employ Diverse Perspectives in Risk Assessment."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 3.1.5.",
+                      "description": "Integrate Diverse Perspectives in Risk Mitigation."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_3_2": {
+              "name": "Govern 3.2\nPolicies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 3.2.1.",
+                      "description": "Identify Roles and Responsibilities for human-AI configurations"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 3.2.2.",
+                      "description": "Develop and Implement Policies and Procedures for human-AI configuration and AI system oversight"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 3.2.3.",
+                      "description": "Provide Training and Awareness."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 3.2.4.",
+                      "description": "Implement a Review and Update Process."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 3.2.5.",
+                      "description": "Conduct Regular Audits and Compliance Checks."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "name": "Govern 4 Organizational teams are committed to a culture that considers and communicates AI risk.",
+          "subcategories": {
+            "GOVERN_4_1": {
+              "name": "Govern 4.1\nOrganizational policies and practices are in place to foster a critical thinking and safety-first mindset in the design, development, deployment, and uses of AI systems to minimize potential negative impacts. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 4.1.1.",
+                      "description": "Cultivate a Culture of Critical Thinking and Safety."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 4.1.2.",
+                      "description": "Integrate Ethics into AI Development and Deployment."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 4.1.3.",
+                      "description": "Emphasize Explainability and Transparency."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 4.1.4.",
+                      "description": "Encourage Human Oversight and Intervention."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 4.1.5.",
+                      "description": "Foster Continuous Monitoring and Evaluation."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_4_2": {
+              "name": "Govern 4.2\nOrganizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 4.2.1.",
+                      "description": "Establish a Risk Documentation Process."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 4.2.2.",
+                      "description": "Create a Risk Communication Plan."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 4.2.3.",
+                      "description": "Establish a Communication Framework."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 4.2.4.",
+                      "description": "Apply the Communication Framework horizontally in the organization and produce metrics about its effectiveness."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 4.2.5.",
+                      "description": "Optimize the Risk communication Framework and its application into AI Development."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_4_3": {
+              "name": "Govern 4.3\nOrganizational practices are in place to enable AI testing, identification of incidents, and information sharing. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 4.3.1.",
+                      "description": "Identify and develop a Testing Strategy and an Incident monitoring approach."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 4.3.2.",
+                      "description": "Apply the testing strategy and incident identification and categorization across the organization."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 4.3.3.",
+                      "description": "Establish a Mechanism for Information Sharing, Incident categorization and an AI Testing policy."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 4.3.4.",
+                      "description": "Apply metrics for the effectiveness of Incident classification and enhance Testing procedures."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 4.3.5.",
+                      "description": "Integrate and Optimize Testing, Incident classification and Information Sharing into AI Development."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "5": {
+          "name": "Govern 5 Processes are in place for robust engagement with relevant AI actors.",
+          "subcategories": {
+            "GOVERN_5_1": {
+              "name": "Govern 5.1\nOrganizational policies and controls are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 5.1.1.",
+                      "description": "Establish a Feedback Collection Mechanism."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 5.1.2.",
+                      "description": "Establish a Feedback Prioritization Framework."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 5.1.3.",
+                      "description": "Integrate Feedback into Risk Management."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 5.1.4.",
+                      "description": "Use Risk management metrics and KPIs to calculate the effectiveness of the Feedback Mechanisms."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 5.1.5.",
+                      "description": "Regularly Evaluate and Adapt Feedback Mechanisms."
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_5_2": {
+              "name": "Govern 5.2\nMechanisms are established to enable the team that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 5.2.1.",
+                      "description": "Establish an Adjudication Process."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 5.2.2.",
+                      "description": "Establish Feedback Integration Mechanisms."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 5.2.3.",
+                      "description": "Foster a Culture of Active Feedback Ingestion."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 5.2.4.",
+                      "description": "Integrate Feedback into Development Cycles."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 5.2.5.",
+                      "description": "Track Feedback Incorporation and continuously improve."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "6": {
+          "name": "Govern 6 Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+          "subcategories": {
+            "GOVERN_6_1": {
+              "name": "Govern 6.1:\nPolicies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party’s intellectual property or other rights. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 6.1.1.",
+                      "description": "Establish Policies and Procedures for Third-Party Collaboration."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 6.1.2.",
+                      "description": "Conduct Due Diligence on Third-Party Partners and implement clear contracts and agreements"
+                    },
+                    {
+                      "id": "Govern 6.1.3.",
+                      "description": "Implement Clear Contracts and Agreements."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 6.1.4.",
+                      "description": "Define policies for Managing IP Activities and processes for addressing IP concerns"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 6.1.6.",
+                      "description": "Conduct Regular Risk Assessments and use metrics to measure the effectiveness of AI policies into managing IP activities."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 6.1.7",
+                      "description": "Regularly evaluate and adapt policies and procedures for third-party collaboration"
+                    }
+                  ]
+                }
+              }
+            },
+            "GOVERN_6_2": {
+              "name": "Govern 6.2\nContingency processes are in place to handle failures or incidents in third-party data or AI systems deemed to be high-risk. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Govern 6.2.1.",
+                      "description": "Identify High-Risk Third-Party Data and AI Systems."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 6.2.2.",
+                      "description": "Establish Contingency Plans."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Govern 6.2.3.",
+                      "description": "Implement Contingency Testing and establish communication channels"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Govern 6.2.5.",
+                      "description": "Establish a Process for Reviewing and Updating Contingency Plans and use metrics to measure their effectiveness."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Govern 6.2.6",
+                      "description": "Optimize the Contigency plans to adapt to the requirements of the organization."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MAP": {
+      "name": "MAP",
+      "categories": {
+        "1": {
+          "name": "Map 1 - Context is established and understood.",
+          "subcategories": {
+            "MAP_1_1": {
+              "name": "Map 1.1 - Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include the specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related Test, Evaluation, Verification, and Validation (TEVV) and system metrics. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 1.1.1.",
+                      "description": "Clearly Define Intended Purposes and Beneficial Uses."
+                    },
+                    {
+                      "id": "Map 1.1.2.",
+                      "description": "Identify Context-Specific Laws, Norms, and Expectations."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.1.3.",
+                      "description": "Define Prospective Deployment Settings."
+                    },
+                    {
+                      "id": "Map 1.1.4.",
+                      "description": "Understand User Expectations and Impacts.."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 1.1.5.",
+                      "description": "Document Assumptions, Limitations, and TEVV (Testing and Evaluation with Values)."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "",
+                      "description": "* Map 1.1. 6 - Use data and metrics to assess and maintain documentation"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 1.1.6.",
+                      "description": "Conduct Continuous Mapping Throughout the AI Lifecycle."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_1_2": {
+              "name": "Map 1.2 - Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 1.2.1.",
+                      "description": "Foster a Culture of Inclusiveness and Diversity."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.2.2.",
+                      "description": "Identify and Engage Interdisciplinary AI Actors."
+                    },
+                    {
+                      "id": "Map 1.2.3.",
+                      "description": "Document Competencies, Skills, and Context-Establishing Capacities."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 1.2.4.",
+                      "description": "Prioritize Opportunities for Interdisciplinary Collaboration."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.2.5",
+                      "description": "Use performance metrics and data  to to evaluate how well interdisciplinary input improves AI outcomes"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 1.2.5.",
+                      "description": "Continuously Evaluate and Enhance Interdisciplinary Collaboration."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_1_3": {
+              "name": "Map 1.3 - The organization’s mission and relevant goals for AI technology are understood and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 1.3.1.",
+                      "description": "Articulate a Clear and Comprehensive Mission Statement"
+                    },
+                    {
+                      "id": "Map 1.3.2.",
+                      "description": "Identify Relevant Goals for AI Technology."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.3.3.",
+                      "description": "Document Understanding of Mission and Goals"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 1.3.4.",
+                      "description": "Align AI Development with Mission and Goals consistently across organization"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.3.5.",
+                      "description": "Communicate Mission and Goals to Stakeholders."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 1.3.6",
+                      "description": "Continiously evaluate and update mission and AI goals"
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_1_4": {
+              "name": "Map  1.4 - The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 1.4.1.",
+                      "description": "Clearly Define the Business Value of AI Systems"
+                    },
+                    {
+                      "id": "Map 1.4.2.",
+                      "description": "Assess the Context of Business Use."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.4.3.",
+                      "description": "Re-Evaluate the Business Value of Existing AI Systems."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 1.4.4.",
+                      "description": "Document Business Value and Use Case Analysis"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.4.5.",
+                      "description": "Use Business Value Evaluation for Decision-Making."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 1.4.6",
+                      "description": "Continiously evaluate and update business use context"
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_1_5": {
+              "name": "Map 1.5 - Organizational risk tolerances are determined and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 1.5.1.",
+                      "description": "Establish an Organizational Risk Tolerance Framework."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.5.2.",
+                      "description": "Document Risk Tolerances and Their Justifications."
+                    },
+                    {
+                      "id": "Map 1.5.3.",
+                      "description": "Involve Relevant Stakeholders in Risk Tolerance Definition."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 1.5.5.",
+                      "description": "Integrate Risk Tolerances into AI Development Process."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.5.7",
+                      "description": "Use data and metrics to track risk"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 1.5.4.",
+                      "description": "Regularly Review and Update Risk Tolerances."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_1_6": {
+              "name": "Map 1.6 - System requirements (e.g., “the system shall respect the privacy of its users”) are elicited from and understood by relevant AI actors. Design decisions take socio-technical implications into account to address AI risks. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 1.6.1.",
+                      "description": "Elicit System Requirements from Relevant AI Actors."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 1.6.2.",
+                      "description": "Prioritize Socio-Technical Implications in Design Decisions"
+                    },
+                    {
+                      "id": "Map 1.6.3.",
+                      "description": "Address AI Risks through Design Decisions."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 1.6.4.",
+                      "description": "Document Socio-Technical Considerations and Design Trade-offs."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 1.6.5.",
+                      "description": "Continuously Evaluate and Refine System Requirements."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "name": "Map 2 - Categorization of the AI system is performed.",
+          "subcategories": {
+            "MAP_2_1": {
+              "name": "Map 2.1 The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders). (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 2.1.1.",
+                      "description": "Define the Specific Tasks and Use Cases."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 2.1.2.",
+                      "description": "Select Appropriate AI Techniques and Methods."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 2.1.3.",
+                      "description": "Develop Technical Specifications."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 2.1.4.",
+                      "description": "Document AI Technique Selection and Design."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 2.1.5.",
+                      "description": "Integrate AI Techniques into System Design."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_2_2": {
+              "name": "Map 2.2 - Information about the AI system’s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 2.2.1.",
+                      "description": "Identify and Document AI System Knowledge Limits."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 2.2.2.",
+                      "description": "Define Human Oversight and Overriding Mechanisms."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 2.2.3.",
+                      "description": "Document Human Oversight and Overriding Procedures."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 2.2.4.",
+                      "description": "Integrate Human Oversight and Overriding into System Architecture."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 2.2.5.",
+                      "description": "Continuously Assess and Update Knowledge Limits Documentation."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_2_3": {
+              "name": "Map 2.3\nScientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 2.3.1.",
+                      "description": "Establish a Scientific Integrity Framework."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 2.3.2.",
+                      "description": "Implement Robust Experimental Design."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 2.3.3.",
+                      "description": "Ensure Data Quality and Representativeness"
+                    },
+                    {
+                      "id": "Map 2.3.6.",
+                      "description": "Document Scientific Integrity and TEVV Considerations"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 2.3.5.",
+                      "description": "Use data and metrics to validate AI System Construct."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 2.3.7.",
+                      "description": "Conduct Regular Reviews and Updates."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "name": "Map 3 - AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood.",
+          "subcategories": {
+            "MAP_3_1": {
+              "name": "Map 3.1\nPotential benefits of intended AI system functionality and performance are examined and docu- mented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 3.1.1.",
+                      "description": "Identify and Evaluate Intended Benefits."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.1.2.",
+                      "description": "Document Potential Benefits and Their Justifications."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 3.1.3.",
+                      "description": "Prioritize Benefits Based on Organizational Priorities."
+                    },
+                    {
+                      "id": "Map 3.1.4.",
+                      "description": "Communicate Potential Benefits to Stakeholders."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.1.6",
+                      "description": "Use metrics and data to evalue benefits of AI systems"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 3.1.5.",
+                      "description": "Monitor and Evaluate Actual Benefits."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_3_2": {
+              "name": "Map 3.2\nPotential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness – as connected to organizational risk tolerance – are examined and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 3.2.1.",
+                      "description": "Identify and Assess Potential Costs."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.2.2.",
+                      "description": "Assess Likelihood and Severity of Costs."
+                    },
+                    {
+                      "id": "Map 3.2.3.",
+                      "description": "Prioritize Costs Based on Organizational Risk Tolerance."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 3.2.4.",
+                      "description": "Document Potential Costs and Mitigation Strategies."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.2.5.",
+                      "description": "Use data and metrics to Monitor Actual Costs."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 3.2.6",
+                      "description": "Continuouslu monitor and evaluate costs"
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_3_3": {
+              "name": "Map 3.3\nTargeted application scope is specified and documented based on the system’s capability, established context, and AI system categorization. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 3.3.1.",
+                      "description": "Clearly Define AI System Capabilities"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.3.2.",
+                      "description": "Establish Clear Application Context"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 3.3.3.",
+                      "description": "Classify AI System Based on Risk Level."
+                    },
+                    {
+                      "id": "Map 3.3.4.",
+                      "description": "Specify Targeted Application Scope."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.3.6",
+                      "description": "Monitor Scope Drift"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 3.3.5.",
+                      "description": "Continuously Evaluate and Adapt Scope."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_3_4": {
+              "name": "Map 3.4\nProcesses for operator and practitioner proficiency with AI system performance and trustwor- thiness – and relevant technical standards and certifications – are defined, assessed, and docu- mented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 3.4.1.",
+                      "description": "Establish Clear Proficiency Requirements."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.4.2.",
+                      "description": "Identify Relevant Technical Standards and Certifications."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 3.4.3.",
+                      "description": "Develop Operator and Practitioner Training Programs."
+                    },
+                    {
+                      "id": "Map 3.4.4.",
+                      "description": "Implement a Certification Process."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "",
+                      "description": "map 3.4.6 Use data and metrics to monitor training effectiveness and compliance"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 3.4.5.",
+                      "description": "Continuously Evaluate and Update Proficiency Requirements."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_3_5": {
+              "name": "Map 3.5\n \n\nProcesses for human oversight are defined, assessed, and documented in accordance with orga- nizational policies from the govern function. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 3.5.1.",
+                      "description": "Establish Human Oversight Roles and Responsibilities."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.5.2.",
+                      "description": "Implement Procedures for Human Oversight Activities."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 3.5.3.",
+                      "description": "Integrate Human Oversight into System Architecture."
+                    },
+                    {
+                      "id": "Map 3.5.4.",
+                      "description": "Integrate Human Oversight into Training and Development."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 3.5.6",
+                      "description": "Use data and metrics to evaluate training and human oversight effectiveness"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 3.5.5.",
+                      "description": "Continuously Evaluate and Adapt Oversight Mechanisms."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "name": "Map 4 - Risks and benefits are mapped for all components of the AI system including third-party software and data.",
+          "subcategories": {
+            "MAP_4_1": {
+              "name": "Map 4.1\nApproaches for mapping AI technology and legal risks of its components – including the use of third-party data or software – are in place, followed, and documented, as are risks of infringement of a third party’s intellectual property or other rights. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 4.1.1.",
+                      "description": "Identify and Assess Legal Risks Associated with AI Technology."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 4.1.2.",
+                      "description": "Document Legal Risk Assessment Findings."
+                    },
+                    {
+                      "id": "Map 4.1.3.",
+                      "description": "Develop Mitigation Strategies for Legal Risks."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 4.1.4.",
+                      "description": "Integrate Legal Risk Management into Development Process."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 4.1.5.",
+                      "description": "Seek Legal Expertise and Compliance Guidance."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 4.1.6",
+                      "description": "Continously monitor and evaluate"
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_4_2": {
+              "name": "Map 4.2\nInternal risk controls for components of the AI system, including third-party AI technologies, are identified and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 4.2.1.",
+                      "description": "Identify and Assess Internal Risks for AI Components."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 4.2.2.",
+                      "description": "Define and Document Internal Risk Control Measures."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 4.2.3.",
+                      "description": "Integrate Internal Risk Control Measures into System Development"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 4.2.4.",
+                      "description": "Document Internal Risk Control Implementation and Effectiveness."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 4.2.5.",
+                      "description": "Maintain a Culture of Security and Risk Management."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "5": {
+          "name": "Map 5 - Map 5 Impacts to individuals, groups, communities, organizations, and society are characterized.",
+          "subcategories": {
+            "MAP_5_1": {
+              "name": "Map 5.1\nLikelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feed- back from those external to the team that developed or deployed the AI system, or other data are identified and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 5.1.1.",
+                      "description": "Identify Potential Impacts."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 5.1.2.",
+                      "description": "Assess Likelihood and Magnitude."
+                    },
+                    {
+                      "id": "Map 5.1.3.",
+                      "description": "Consider Past Experiences and External Feedback."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 5.1.4.",
+                      "description": "Document Impact Likelihood and Magnitude."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 5.1.6",
+                      "description": "Use data and metrics to assess impact"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 5.1.5.",
+                      "description": "Continuously Monitor and Update Impact Assessment."
+                    }
+                  ]
+                }
+              }
+            },
+            "MAP_5_2": {
+              "name": "Map 5.2\nControls and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Map 5.2.1",
+                      "description": "Establish a Mechanism for Regular Engagement"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Map 5.2.2",
+                      "description": "Solicit Feedback on Positive and Negative Impacts."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Map 5.2.3",
+                      "description": "Integrate Feedback into AI System Enhancements."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Map 5.2.4",
+                      "description": "Document Feedback Mechanisms and Integration"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Map 5.2.5",
+                      "description": "Continuously Evaluate and Adapt Engagement Controls."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MEASURE": {
+      "name": "MEASURE",
+      "categories": {
+        "1": {
+          "name": "Measure 1 - Appropriate methods and metrics are identified and applied.",
+          "subcategories": {
+            "MEASURE_1_1": {
+              "name": "Measure 1.1\nApproaches and metrics for measurement of AI risks enumerated during the map function are selected for implementation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not – or cannot – be measured are properly documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 1.1.1.",
+                      "description": "Select Appropriate Measurement Approaches."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 1.1.2.",
+                      "description": "Develop and Implement Measurement Metrics."
+                    },
+                    {
+                      "id": "Measure 1.1.3.",
+                      "description": "Establish Measurement Procedures and Tools"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 1.1.4.",
+                      "description": "Integrate Measurement into the AI Development Lifecycle consistently throughout organization."
+                    },
+                    {
+                      "id": "Measure 1.1.5.",
+                      "description": "Document Measurement Approaches and Limitations."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 1.1.6",
+                      "description": "Use data and metrics to analyze AI risk measurment effectiveness and trends"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 1.1.6.",
+                      "description": "Continuously Evaluate and Improve Measurement Processes"
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_1_2": {
+              "name": "Measure 1.2\nAppropriateness of AI metrics and effectiveness of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 1.2.1.",
+                      "description": "Regularly Evaluate Measurement Approach Relevance."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 1.2.2.",
+                      "description": "Analyze Error Reports and Identify Impacts."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 1.2.3",
+                      "description": "Assess Effectiveness of Existing Controls"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 1.2.4.",
+                      "description": "Integrate Evaluation Findings into Risk Management."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 1.2.5.",
+                      "description": "Continuously Improve Measurement and Control Strategies."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_1_3": {
+              "name": "Measure 1.3\nInternal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 1.3.1.",
+                      "description": "Engage Internal and External Expertise."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 1.3.2.",
+                      "description": "Consult with Domain Experts and Users."
+                    },
+                    {
+                      "id": "Measure 1.3.3.",
+                      "description": "Involve AI Actors and Affected Communities"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 1.3.5.",
+                      "description": "Document Assessment Involvement and Seek Clear Roles."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 1.3.4.",
+                      "description": "Tailor Assessment Involvement to Risk Tolerance."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 1.3.6.",
+                      "description": "Continuously Evaluate and Adapt Assessment Approach."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "name": "Measure 2 AI systems are evaluated for trustworthy characteristics.",
+          "subcategories": {
+            "MEASURE_2_1": {
+              "name": "Measure 2.1\nTest sets, metrics, and details about the tools used during Test & Evaluation, Validation & Verifica- tion (TEVV) are documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.1.2.",
+                      "description": "Establish Clear Test Metrics."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.1.1.",
+                      "description": "Develop and Document Test Sets."
+                    },
+                    {
+                      "id": "Measure 2.1.3.",
+                      "description": "Identify and Document Testing Tools."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.1.4.",
+                      "description": "Establish Test Execution Procedures."
+                    },
+                    {
+                      "id": "Measure 2.1.5.",
+                      "description": "Integrate Testing into Development Lifecycle"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.1.6.",
+                      "description": "Document Testing Results and Insights."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.1.7.",
+                      "description": "Continuously Evaluate and Adapt Testing Approach."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_2": {
+              "name": "Measure 2.2\nEvaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.2.1.",
+                      "description": "Design and Plan Human-Subject Evaluations."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.2.2.",
+                      "description": "Obtain Informed Consent."
+                    },
+                    {
+                      "id": "Measure 2.2.3.",
+                      "description": "Protect Participant Privacy."
+                    },
+                    {
+                      "id": "Measure 2.2.4.",
+                      "description": "Respect Participant Withdraw and Refusal Rights."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.2.5.",
+                      "description": "Manage Data Collection and Analysis."
+                    },
+                    {
+                      "id": "Measure 2.2.6.",
+                      "description": "Protect Participant Privacy and Confidentiality During Data Storage and Usage."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.2.7.",
+                      "description": "Disclose Study Results and Address Participant Concerns."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.2.8.",
+                      "description": "Continuously Evaluate and Enhance Human-Subject Evaluation Controls"
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_3": {
+              "name": "Measure 2.3\nAI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented. (Play- book 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.3.1.",
+                      "description": "Establish Performance or Assurance Criteria."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.3.2.",
+                      "description": "Identify Representative Deployment Settings."
+                    },
+                    {
+                      "id": "Measure 2.3.3.",
+                      "description": "Develop Measurement Protocols."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.3.4.",
+                      "description": "Conduct Performance or Assurance Testing."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.3.5.",
+                      "description": "Analyze and Interpret Test Results."
+                    },
+                    {
+                      "id": "Measure 2.3.6.",
+                      "description": "Document Performance or Assurance Demonstration."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.3.7.",
+                      "description": "Continuously Evaluate and Adapt Performance or Assurance Measures"
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_4": {
+              "name": "Measure 2.4\n \n\nThe functionality and behavior of the AI system and its components – as identified in the map function – are monitored when in production. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.4.1.",
+                      "description": "Establish Monitoring Requirements and Objectives"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.4.2.",
+                      "description": "Select Appropriate Monitoring Tools and Technologies."
+                    },
+                    {
+                      "id": "Measure 2.4.3.",
+                      "description": "Implement Monitoring Infrastructure and Processes."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.4.4.",
+                      "description": "Collect and Analyze Monitoring Data"
+                    },
+                    {
+                      "id": "Measure 2.4.5.",
+                      "description": "Generate and Respond to Monitoring Alerts."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.4.6.",
+                      "description": "Document Monitoring Activities and Findings."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.4.7.",
+                      "description": "Continuously Evaluate and Improve Monitoring."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_5": {
+              "name": "Measure 2.5\nThe AI system to be deployed is demonstrated to be valid and reliable. Limitations of the gener- alizability beyond the conditions under which the technology was developed are documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.5.1.",
+                      "description": "Establish Validity and Reliability Criteria."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.5.2.",
+                      "description": "Design and Conduct Validation and Reliability Testing."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.5.3.",
+                      "description": "Collect and Analyze Testing Data."
+                    },
+                    {
+                      "id": "Measure 2.5.4.",
+                      "description": "Assess Generalizability Limitations."
+                    },
+                    {
+                      "id": "Measure 2.5.5.",
+                      "description": "Document Validation and Reliability Demonstration."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.5.6.",
+                      "description": "Continuously Evaluate and Adapt Validity and Reliability Measures."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_6": {
+              "name": "Measure 2.6\nThe AI system is evaluated regularly for safety risks – as identified in the map function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.6.1.",
+                      "description": "Establish a Safety Risk Evaluation Framework."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.6.2.",
+                      "description": "Develop Safety Metrics and Thresholds."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.6.3.",
+                      "description": "Conduct Regular Safety Risk Assessments."
+                    },
+                    {
+                      "id": "Measure 2.6.4.",
+                      "description": "Prioritize Safety Risk Mitigation."
+                    },
+                    {
+                      "id": "Measure 2.6.5.",
+                      "description": "Implement Safe Fail Mechanisms."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.6.6.",
+                      "description": "Use data and metrics for continuous Safety Risk Monitoring."
+                    },
+                    {
+                      "id": "Measure 2.6.7.",
+                      "description": "Document Safety Risk Evaluation and Mitigation."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.6.8.",
+                      "description": "Continuously Evaluate and Enhance Safety Risk Management."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_7": {
+              "name": "Measure 2.7\n \n\nAI system security and resilience – as identified in the map function – are evaluated and docu- mented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.7.1.",
+                      "description": "Establish a Security and Resilience Evaluation Framework."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.7.2.",
+                      "description": "Develop Security and Resilience Metrics and Thresholds."
+                    },
+                    {
+                      "id": "Measure 2.7.3.",
+                      "description": "Conduct Regular Security and Resilience Assessments."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.7.4.",
+                      "description": "Prioritize Security and Resilience Enhancement."
+                    },
+                    {
+                      "id": "Measure 2.7.5.",
+                      "description": "Implement Multilayered Defense Strategies."
+                    },
+                    {
+                      "id": "Measure 2.7.6.",
+                      "description": "Conduct Regular Penetration Testing and Red Team Exercises."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.7.7.",
+                      "description": "Implement Regular Security Patching and Updates."
+                    },
+                    {
+                      "id": "Measure 2.7.8.",
+                      "description": "Document Security and Resilience Evaluation and Enhancement."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.7.9.",
+                      "description": "Continuously Evaluate and Enhance Security and Resilience"
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_8": {
+              "name": "Measure 2.8\nRisks associated with transparency and accountability – as identified in the map function – are examined and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.8.1.",
+                      "description": "Identify Transparency and Accountability Concerns"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.8.2.",
+                      "description": "Assess Impacts of Transparency and Accountability Gaps."
+                    },
+                    {
+                      "id": "Measure 2.8.3.",
+                      "description": "Develop Transparency and Accountability Enhancement Strategies"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.8.4.",
+                      "description": "Establish Transparency and Accountability Reporting Mechanisms."
+                    },
+                    {
+                      "id": "Measure 2.8.6.",
+                      "description": "Document Transparency and Accountability Risks and Mitigation"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.8.5.",
+                      "description": "Continuously Evaluate and Adapt Transparency and Accountability."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.8.7.",
+                      "description": "Promote Transparency and Accountability Culture."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_9": {
+              "name": "Measure 2.9\n \n\nThe AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the map function – to inform responsible use and governance. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.9.1.",
+                      "description": "Explain the AI Model"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.9.2.",
+                      "description": "Validate the AI Model"
+                    },
+                    {
+                      "id": "Measure 2.9.3.",
+                      "description": "Document the AI System and Its Outputs."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.9.4.",
+                      "description": "Interpret AI System Output within Context."
+                    },
+                    {
+                      "id": "Measure 2.9.5.",
+                      "description": "Integrate Explainability and Validation into Decision-Making Processes."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.9.6.",
+                      "description": "Use data and metrics to continuously Evaluate and Improve Explainability and Validation."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.9.7.",
+                      "description": "Promote Explainability and Validation Culture."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_10": {
+              "name": "Measure 2.10\nPrivacy risk of the AI system – as identified in the map function – is examined and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.10.1.",
+                      "description": "Identify and Assess Privacy Risks"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.10.2.",
+                      "description": "Assess Impacts of Privacy Risks."
+                    },
+                    {
+                      "id": "Measure 2.10.3.",
+                      "description": "Develop Privacy Risk Mitigation Strategies"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.10.4.",
+                      "description": "Establish Privacy Risk Reporting Mechanisms."
+                    },
+                    {
+                      "id": "Measure 2.10.6.",
+                      "description": "Document Privacy Risks and Mitigation."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.10.5.",
+                      "description": "Continuously Evaluate and Adapt Privacy Risk Mitigation."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.10.7.",
+                      "description": "Promote Privacy Culture"
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_11": {
+              "name": "Measure 2.11\nFairness and bias – as identified in the map function – are evaluated and results are documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.11.1.",
+                      "description": "Identify and Assess Fairness and Bias Concerns."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.11.2.",
+                      "description": "Assess Impacts of Fairness and Bias Concerns"
+                    },
+                    {
+                      "id": "Measure 2.11.3.",
+                      "description": "Develop Fairness and Bias Mitigation Strategies."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.11.4.",
+                      "description": "Establish Fairness and Bias Reporting Mechanisms."
+                    },
+                    {
+                      "id": "Measure 2.11.6.",
+                      "description": "Document Fairness and Bias Concerns and Mitigation."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.11.5.",
+                      "description": "use data and metrics to continuously Evaluate and Adapt Fairness and Bias Mitigation."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.11.7.",
+                      "description": "Promote Fairness and Bias Culture."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_12": {
+              "name": "Measure 2.12\nEnvironmental impact and sustainability of AI model training and management activities – as identified in the map function – are assessed and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.12.1.",
+                      "description": "Identify and Assess Environmental Impact"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.12.2.",
+                      "description": "Develop Environmental Mitigation Strategies."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.12.3.",
+                      "description": "Establish Environmental Reporting Mechanisms."
+                    },
+                    {
+                      "id": "Measure 2.12.5.",
+                      "description": "Document Environmental Impact Assessment and Mitigation"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.12.4.",
+                      "description": "Continuously Evaluate and Adapt Environmental Mitigation."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.12.6.",
+                      "description": "Promote Environmental Awareness and Stewardship."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_2_13": {
+              "name": "Measure 2.13\nEffectiveness of the employed TEVV metrics and processes in the measure function are evaluated and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 2.13.1.",
+                      "description": "Evaluate TEVV Metric Effectiveness."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.13.2.",
+                      "description": "Evaluate TEVV Process Effectiveness."
+                    },
+                    {
+                      "id": "Measure 2.13.3.",
+                      "description": "Document TEVV Evaluation Findings"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 2.13.4.",
+                      "description": "Incorporate TEVV Feedback into Decision-Making."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 2.13.5.",
+                      "description": "Continuously Improve TEVV Metrics and Processes."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 2.13.6.",
+                      "description": "Foster TEVV Culture."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "name": "Measure 3 Mechanisms for tracking identified AI risks over time are in place.",
+          "subcategories": {
+            "MEASURE_3_1": {
+              "name": "Measure 3.1\nApproaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 3.1.1.",
+                      "description": "Establish a Risk Tracking Mechanism."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 3.1.2.",
+                      "description": "Establish a Risk Identification Process."
+                    },
+                    {
+                      "id": "Measure 3.1.3.",
+                      "description": "Assess Risk Severity and Likelihood."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 3.1.4.",
+                      "description": "Prioritize Risks and Implement Mitigation Strategies."
+                    },
+                    {
+                      "id": "Measure 3.1.5.",
+                      "description": "Establish Risk Reporting and Communication Mechanisms."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 3.1.6.",
+                      "description": "Continuously Monitor and Adapt Risk Management."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 3.1.7.",
+                      "description": "Promote Risk Culture."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_3_2": {
+              "name": "Measure 3.2\nRisk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 3.2.1.",
+                      "description": "Recognize Risk Measurement Limitations."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 3.2.2.",
+                      "description": "Employ Alternative Risk Assessment Methods."
+                    },
+                    {
+                      "id": "Measure 3.2.3.",
+                      "description": "Leverage Emerging Risk Assessment Tools."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 3.2.4.",
+                      "description": "Collaborate with Research and Standards Bodies."
+                    },
+                    {
+                      "id": "Measure 3.2.5.",
+                      "description": "Promote Risk Awareness and Education."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 3.2.6",
+                      "description": "Contiunously monitor and adapt risk tracking approaches"
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_3_3": {
+              "name": "Measure 3.3\nFeedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 3.3.1.",
+                      "description": "Establish Feedback Mechanisms for End Users and Impacted Communities."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 3.3.2.",
+                      "description": "Establish Clear Guidelines for Feedback Reporting."
+                    },
+                    {
+                      "id": "Measure 3.3.3.",
+                      "description": "Assign Dedicated Resources for Feedback Management."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 3.3.4.",
+                      "description": "Integrate Feedback into AI System Evaluation Metrics."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 3.3.5.",
+                      "description": "Analyze and Address Feedback Trends."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 3.3.6.",
+                      "description": "Foster a Culture of Feedback and Transparency."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "name": "Measure 4 Feedback about efficacy of measurement is gathered and assessed.",
+          "subcategories": {
+            "MEASURE_4_1": {
+              "name": "Measure 4.1\nMeasurement approaches for identifying AI risks are connected to deployment context(s) and informed through consultation with domain experts and other end users. Approaches are docu- mented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 4.1.1.",
+                      "description": "Identify Contextual Risk Parameters."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 4.1.2.",
+                      "description": "Consult Domain Experts and End Users."
+                    },
+                    {
+                      "id": "Measure 4.1.3.",
+                      "description": "Design Context-Specific Measurement Approaches."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 4.1.4.",
+                      "description": "Document Measurement Approaches"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 4.1.5.",
+                      "description": "Use data and metrics to continuously Evaluate and Adapt Measurement Approaches."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 4.1.6.",
+                      "description": "Foster a Culture of Context-Aware Risk Management"
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_4_2": {
+              "name": "Measure 4.2\nMeasurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended. Results are documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 4.2.1.",
+                      "description": "Gather Trustworthiness Measurement Data."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 4.2.2.",
+                      "description": "Involve Domain Experts and Relevant AI Actors"
+                    },
+                    {
+                      "id": "Measure 4.2.3.",
+                      "description": "Validate System Performance against Intended Design."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 4.2.4.",
+                      "description": "Document Trustworthiness Measurement Results"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 4.2.5.",
+                      "description": "Continuously Monitor and Adapt Trustworthiness Evaluation."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 4.2.6.",
+                      "description": "Promote Trustworthiness-Driven AI Development."
+                    }
+                  ]
+                }
+              }
+            },
+            "MEASURE_4_3": {
+              "name": "Measure 4.3\nMeasurable performance improvements or declines based on consultations with relevant AI actors, including affected communities, and field data about context-relevant risks and trustworthiness characteristics are identified and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Measure 4.3.1.",
+                      "description": "Gather Field Data and Identify Performance Trends."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 4.3.2.",
+                      "description": "Consult with Relevant AI Actors and Affected Communities."
+                    },
+                    {
+                      "id": "Measure 4.3.3.",
+                      "description": "Identify and Correlate Risks and Trustworthiness Characteristics."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Measure 4.3.4.",
+                      "description": "Document Measurable Performance Changes."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Measure 4.3.5.",
+                      "description": "Continuously Monitor and Adapt Performance Monitoring."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Measure 4.3.6.",
+                      "description": "Promote Evidence-Based Performance Improvement."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MANAGE": {
+      "name": "MANAGE",
+      "categories": {
+        "1": {
+          "name": "Manage 1- AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
+          "subcategories": {
+            "MANAGE_1_1": {
+              "name": "Manage 1.1 - A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 1.1.1.",
+                      "description": "Assess AI systems  Alignment  with Intended Purposes and Objectives."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.1.2.",
+                      "description": "Conduct Requirements Analysis and Gap Analysis on AI systems"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 1.1.3.",
+                      "description": "Engage with Stakeholders for Feedback and Validation and evaluate tradeoffs and constraints of AI systems"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.1.5",
+                      "description": "Use data and metrics to make Informed Decisions and Document Rationale and establish governence mechanisms"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 1.1.7.",
+                      "description": "Continuously Monitor and Adapt AI systems"
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_1_2": {
+              "name": "Manage 1.2 - \nTreatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 1.2.1.",
+                      "description": "Prioritize AI Risks Based on Impact and Likelihood and categorize and group similar risks and develop basic risk mititgation strategies"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.2.3.",
+                      "description": "Assess Resource Availability and Constraints and  implement basic risk mititgation strategies"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 1.2.5.",
+                      "description": "Implement Risk Mitigation Plans consistently across organization."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.2.6",
+                      "description": "Use data and metrics to Monitor and Evaluate Risk Mitigation Effectiveness"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 1.2.7.",
+                      "description": "Foster a Culture of Risk Awareness and Mitigation and continuously monitor and update Risk Mititgation Plans"
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_1_3": {
+              "name": "Manage 1.3. - \nResponses to the AI risks deemed high priority, as identified by the map function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 1.3.1.",
+                      "description": "Identify and Prioritize High-Priority Risks"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.3.2.",
+                      "description": "Develop Risk Response Options."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 1.3.3.",
+                      "description": "Mitigate Identified high risks across organization"
+                    },
+                    {
+                      "id": "Manage 1.3.4.",
+                      "description": "Transfer Risks to External Parties."
+                    },
+                    {
+                      "id": "Manage 1.3.5.",
+                      "description": "Avoid the Realization of Identified Risks"
+                    },
+                    {
+                      "id": "Manage 1.3.6.",
+                      "description": "Accept Unavoidable Risks with Contingency Plans"
+                    },
+                    {
+                      "id": "Manage 1.3.7.",
+                      "description": "Document and Communicate Risk Response Actions."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.3.7.",
+                      "description": "Use metrics to measure the effectiveness of Risk Response Actions."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 1.3.8.",
+                      "description": "Optimize the Risk response Actions to adapt to the organizations requirements."
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_1_4": {
+              "name": "Manage 1.4 - \nNegative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 1.4.1.",
+                      "description": "Identify and Quantify Residual Risks"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.4.2",
+                      "description": "Document Residual Risks for Downstream Acquirers and End Users"
+                    },
+                    {
+                      "id": "Manage 1.4.3.",
+                      "description": "Document Residual Risks for End Users"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 1.4.4.",
+                      "description": "Establish Communication Channels with Downstream Acquirers and End Users"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 1.4.4",
+                      "description": "Use data and metrics to monitor and evaluate residual risks"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 1.4.5.",
+                      "description": "Continuously Monitor and update Residual Risks and foster a culture of Risk Awareness and Transparency"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "name": "Manage 2 - Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, imple- mented, documented, and informed by input from relevant AI actors.",
+          "subcategories": {
+            "MANAGE_2_1": {
+              "name": "Manage 2.1\nResources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 2.1.1.",
+                      "description": "Identify possible Resources and approaches to reduce the magnitude or likelihood of potential impacts. Evaluate Resource Allocation and Constraints."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.1.2.",
+                      "description": "Explore Viable Non-AI Alternative and evaluate Resource Allocation and Constraints."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 2.1.3.",
+                      "description": "Minimize AI System Reliance across organization and define policies for using resources and methods for minimizing the impact of potential AI risks."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.1.4.",
+                      "description": "Use metrics to measure the effectiveness of  Existing Risk Management Frameworks."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 2.1.5.",
+                      "description": "Foster a Culture of Resource Optimization"
+                    },
+                    {
+                      "id": "Manage 2.1.6.",
+                      "description": "Continuously Evaluate and Adapt AI Risk Management Strategies."
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_2_2": {
+              "name": "Manage 2.2\nMechanisms are in place and applied to sustain the value of deployed AI systems. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 2.2.1.",
+                      "description": "Establish Ongoing Monitoring and Evaluation"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.2.2.",
+                      "description": "Implement Maintenance and Update mechanisms across the organization"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 2.2.2.",
+                      "description": "Define policies and procedures for Automated Maintenance and Updates."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.2.3.",
+                      "description": "Conduct Regular Testing and Validation."
+                    },
+                    {
+                      "id": "Manage 2.2.4.",
+                      "description": "Facilitate data quality management and Use data and metrics to assess and update Performance Issues Proactively"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 2.2.6.",
+                      "description": "Promote Stakeholder Involvement and Feedback and adapt to evolving requirements and technological advancements"
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_2_3": {
+              "name": "Manage 2.3\nProcedures are followed to respond to and recover from a previously unknown risk when it is identified. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 2.3.3.",
+                      "description": "Conduct Root Cause Analysis"
+                    },
+                    {
+                      "id": "Manage 2.3.2.",
+                      "description": "Establish Rapid Detection Mechanisms."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.3.1.",
+                      "description": "Establish Incident Response Plan."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "",
+                      "description": "Manage X.X.X. Apply the Incident Response policies and procedures across the organization.\n\nManage X.X.X Train employees on the Incident Response policy applied across the organization"
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.3.5.",
+                      "description": "Maintain Transparency and Communication and use data and metrics to Implement Corrective and Preventive Actions."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 2.3.6.",
+                      "description": "Continuously Review and Improve Response procedures"
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_2_4": {
+              "name": "Manage 2.4\nMechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 2.4.2.",
+                      "description": "Identify and Assess Potential Disengagement Scenarios."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.4.3.",
+                      "description": "Establish Clear Disengagement Criteria and assign disengagment and deactivation responsibilities"
+                    },
+                    {
+                      "id": "Manage 2.4.4.",
+                      "description": "Assign Disengagement and Deactivation Responsibilities"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 2.4.1",
+                      "description": "Establish a Disengagement and Deactivation Framework"
+                    },
+                    {
+                      "id": "Manage 2.4.5.",
+                      "description": "Implement Prompt and Effective Disengagement Procedures."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 2.4.6.",
+                      "description": "Maintain Transparency and Accountability."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 2.4.7.",
+                      "description": "Foster a Culture of Responsible AI Development and Deployment."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "name": "Manage 3 - AI risks and benefits from third-party entities are managed.",
+          "subcategories": {
+            "MANAGE_3_1": {
+              "name": "Manage 3.1 - \nAI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 3.1.1.",
+                      "description": "Identify and Evaluate Third-party Resources."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 3.1.2.",
+                      "description": "Establish Formal Contracts with Third-party Providers"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 3.1.3.",
+                      "description": "Define Monitoring and Auditing procedures"
+                    },
+                    {
+                      "id": "Manage 3.1.4.",
+                      "description": "Implement Data Governance and Privacy Controls."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 3.1.5.",
+                      "description": "Use data and metrics to Employ Risk Mitigation Strategies"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 3.1.6.",
+                      "description": "Foster Open Communication and Collaboration and continuosuly monitor and evalute third party resources"
+                    },
+                    {
+                      "id": "Manage 3.1.7.",
+                      "description": "Integrate AI RMF Controls into Procurement Processes"
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_3_2": {
+              "name": "Manage 3.2 - \nPre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 3.2.1.",
+                      "description": "Establish Pre-trained Model Inventory and Tracking."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 3.2.2.",
+                      "description": "Conduct Regular Monitoring of Pre-trained Model Performance."
+                    },
+                    {
+                      "id": "Manage 3.2.3.",
+                      "description": "Implement Continuous Verification and Validation."
+                    },
+                    {
+                      "id": "Manage 3.2.4.",
+                      "description": "Manage Pre-trained Model Updates and Maintenance"
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 3.2.5.",
+                      "description": "Establish Decommissioning Procedures for Pre-trained Models."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 3.2.5",
+                      "description": "Use data and metrics to assess pre-trained models"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 3.2.6.",
+                      "description": "Foster a Culture of Pre-trained Model Awareness."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "name": "Manage 4 - Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly.",
+          "subcategories": {
+            "MANAGE_4_1": {
+              "name": "Manage 4.1 - \nPost-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 4.1.1.",
+                      "description": "Establish a Post-Deployment Monitoring Plan."
+                    },
+                    {
+                      "id": "Manage 4.1.2.",
+                      "description": "Capture and Evaluate User Feedback."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 4.1.3.",
+                      "description": "Implement an Appeal and Override Mechanism."
+                    },
+                    {
+                      "id": "Manage 4.1.4.",
+                      "description": "Develop a Decommissioning Plan."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 4.1.5.",
+                      "description": "Implement Incident Response and Recovery Procedures."
+                    },
+                    {
+                      "id": "Manage 4.1.6.",
+                      "description": "Implement Change Management Processes."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "",
+                      "description": "Manage X.X.X Use metrics to measure the effectiveness of Post-Deployment Monitoring Plan"
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 4.1.7.",
+                      "description": "Foster a Culture of Continuous Monitoring and Improvement."
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_4_2": {
+              "name": "Manage 4.2 - \nMeasurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 4.2.1.",
+                      "description": "Identify  measurable improvement goals for AI systems"
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 4.2.1.",
+                      "description": "Integrate Measurable Improvement Goals into AI system updates."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 4.2.2.",
+                      "description": "Establish Regular AI system Update Cycles."
+                    },
+                    {
+                      "id": "Manage 4.2.4.",
+                      "description": "Foster Collaboration with AI Actors."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 4.2.3.",
+                      "description": "Leverage Data-Driven Insights."
+                    },
+                    {
+                      "id": "Manage 4.2.5.",
+                      "description": "Document Improvement Activities.\n\nManage X.X.X Monitor the effectiveness of measurable activities for continual improvements."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 4.2.6.",
+                      "description": "Continuously Evaluate the Goals and Adapt to the Development of the Technology of AI systems."
+                    }
+                  ]
+                }
+              }
+            },
+            "MANAGE_4_3": {
+              "name": "Manage 4.3 - \nIncidents and errors are communicated to relevant AI actors, including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented. (Playbook 2023)",
+              "controls": {
+                "1": {
+                  "level": 1,
+                  "level_name": "Initial",
+                  "controls": [
+                    {
+                      "id": "Manage 4.3.1.",
+                      "description": "Establish a Clear Incident Reporting Process and Rapid Detection Mechanisms."
+                    }
+                  ]
+                },
+                "2": {
+                  "level": 2,
+                  "level_name": "Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 4.3.2.",
+                      "description": "Implement Rapid Detection Mechanisms."
+                    }
+                  ]
+                },
+                "3": {
+                  "level": 3,
+                  "level_name": "Defined",
+                  "controls": [
+                    {
+                      "id": "Manage 4.3.3.",
+                      "description": "Conduct Root Cause Analysis."
+                    },
+                    {
+                      "id": "Manage 4.3.6.",
+                      "description": "Document Incident Response Procedures."
+                    }
+                  ]
+                },
+                "4": {
+                  "level": 4,
+                  "level_name": "Quantitatively Managed",
+                  "controls": [
+                    {
+                      "id": "Manage 4.3.4.",
+                      "description": "Use data and metrics to Implement Corrective and Preventive Actions."
+                    },
+                    {
+                      "id": "Manage 4.3.5.",
+                      "description": "Maintain Transparency and Communication."
+                    }
+                  ]
+                },
+                "5": {
+                  "level": 5,
+                  "level_name": "Optimizing",
+                  "controls": [
+                    {
+                      "id": "Manage 4.3.7.",
+                      "description": "Foster a Culture of Incident Response Readiness."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "statistics": {
+    "total_functions": 4,
+    "total_categories": 19,
+    "total_subcategories": 72,
+    "total_controls": 442,
+    "by_function": {
+      "GOVERN": {
+        "categories": 6,
+        "subcategories": 19,
+        "controls": 105
+      },
+      "MAP": {
+        "categories": 5,
+        "subcategories": 18,
+        "controls": 104
+      },
+      "MEASURE": {
+        "categories": 4,
+        "subcategories": 22,
+        "controls": 147
+      },
+      "MANAGE": {
+        "categories": 4,
+        "subcategories": 13,
+        "controls": 86
+      }
+    }
+  }
+}
