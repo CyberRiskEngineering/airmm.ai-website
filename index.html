@@ -301,25 +301,55 @@
   }
 
   // KPI & dashboard helpers
-  function overallTallies(){
-    const t={yes:0,partial:0,no:0,na:0,all:0,answered:0};
-    const f=AIRMM_STATE.selectedFunc||AIRMM_STATE.activeFunc;
-    t.all = f? countFunctionQuestions(f) : Object.keys(AIRMM_STATE.functions).reduce((s,k)=>s+countFunctionQuestions(k),0);
-    for(const v of Object.values(AIRMM_STATE.answers)){
-      if(v==='yes') t.yes++; else if(v==='partial') t.partial++; else if(v==='no') t.no++; else if(v==='na') t.na++;
-      t.answered++;
-    }
-    return t;
+  function overallTallies(scopeKey = AIRMM_STATE.selectedFunc || AIRMM_STATE.activeFunc){
+  const t = { yes:0, partial:0, no:0, na:0, all:0, answered:0 };
+
+  // Denominator: total questions in scope
+  if (scopeKey) {
+    t.all = countFunctionQuestions(scopeKey);
+  } else {
+    t.all = Object.keys(AIRMM_STATE.functions)
+      .reduce((s,k)=> s + countFunctionQuestions(k), 0);
   }
 
-  function renderKPIs(){
-    const row=$('#kpiRow'); if(!row) return; const t=overallTallies(); row.innerHTML='';
-    const blocks=[ ['Yes',t.yes], ['Partial',t.partial], ['No',t.no], ['N/A',t.na], ['Answered',t.answered], ['Coverage', (t.all?Math.round(100*t.answered/t.all):0)+'%'] ];
-    blocks.forEach(([label,val])=>{
-      const n=el('div',{class:'kpi'},[ el('h5',{},[label]), el('div',{class:'num'},[String(val)]) ]);
-      row.appendChild(n);
-    });
+  // Numerator: answers only from the same scope
+  let entries = Object.entries(AIRMM_STATE.answers);
+  if (scopeKey) {
+    entries = entries.filter(([k]) => k.startsWith(scopeKey + '|'));
   }
+
+  for (const [, v] of entries) {
+    if (v === 'yes') t.yes++;
+    else if (v === 'partial') t.partial++;
+    else if (v === 'no') t.no++;
+    else if (v === 'na') t.na++;
+  }
+  t.answered = entries.length;
+  return t;
+}
+
+
+  function renderKPIs(){
+  const row = $('#kpiRow'); if(!row) return;
+  const t = overallTallies();  // now properly scoped
+  const coveragePct = t.all ? Math.round(100 * t.answered / t.all) : 0;
+
+  row.innerHTML = '';
+  [
+    ['Yes', t.yes],
+    ['Partial', t.partial],
+    ['No', t.no],
+    ['N/A', t.na],
+    ['Answered', t.answered],
+    ['Coverage', coveragePct + '%']
+  ].forEach(([label,val])=>{
+    const n = el('div',{class:'kpi'},[
+      el('h5',{},[label]),
+      el('div',{class:'num'},[ String(val) ])
+    ]);
+    row.appendChild(n);
+  });
+}
 
   // Distribution stacked bar (non-expanding)
   function renderDistribution(){
@@ -567,3 +597,4 @@
   </script>
 </body>
 </html>
+
