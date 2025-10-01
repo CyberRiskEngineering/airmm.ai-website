@@ -878,7 +878,7 @@
                   "controls": [
                     {
                       "id": "Govern 4.3.2.",
-                      "description": "Apply the testing strategy and incident identification and categorization across the organization."
+                      "description": "The organization shall implement standardized, organization-wide mechanisms for AI testing, incident identification and categorization. These mechanisms shall include approved go/no-go tests before release and after material change; a single incident taxonomy with human-defined detection triggers; human-run reporting channels; assigned responsibilities for detection, triage, categorization, and escalation; and a central incident register with basic categorization."
                     }
                   ]
                 },
@@ -888,7 +888,7 @@
                   "controls": [
                     {
                       "id": "Govern 4.3.3.",
-                      "description": "Establish a Mechanism for Information Sharing, Incident categorization and an AI Testing policy."
+                      "description": "The organization shall implement the testing, incident identification/categorization, and information-sharing procedures consistently across all AI systems and projects. Execution shall remain outside the span of control of AI systems and undisclosed to them. Execution shall be documented and auditable, including records of test plans/results/approvals (or waivers), incident classifications/timelines/actions, and distributed summaries. Procedures shall be periodically reviewed for alignment with strategy, governance, and evolving risk tolerance, with improvements driven by test failures and incident trends. Responsibilities already defined shall be embedded into formal roles, with required training for staff involved in testing, detection/triage/escalation, and communications."
                     }
                   ]
                 },
@@ -898,7 +898,7 @@
                   "controls": [
                     {
                       "id": "Govern 4.3.4.",
-                      "description": "Apply metrics for the effectiveness of Incident classification and enhance Testing procedures."
+                      "description": "The organization shall conduct regular, structured assurance assessments of its AI testing, incident identification, and information-sharing mechanisms to identify vulnerabilities and control gaps, and to confirm that execution remains outside the span of control of AI systems and undisclosed to them. Metrics and KPIs shall be established and monitored—e.g., defect-escape rate, mean time to detect/contain, correct categorization rate—with thresholds/SLAs enforced through time-bound remediation. Transparent, periodic reports shall be produced for relevant stakeholders, containing which activities are shared with AI systems and which are not."
                     }
                   ]
                 },
@@ -908,7 +908,7 @@
                   "controls": [
                     {
                       "id": "Govern 4.3.5.",
-                      "description": "Integrate and Optimize Testing, Incident classification and Information Sharing into AI Development."
+                      "description": " The organization shall continuously monitor, evaluate, and improve AI testing, incident identification, and information-sharing procedures using lessons learned, performance telemetry and emerging threat intelligence from and about AI systems. Findings and trends shall be used to enhance testing procedures and incident-classification practices. A risk-based decision shall determine what remains undisclosed to and outside the span of control of AI systems."
                     }
                   ]
                 }
@@ -3357,7 +3357,7 @@
                   "controls": [
                     {
                       "id": "Measure 3.3.1.",
-                      "description": "Establish Feedback Mechanisms for End Users and Impacted Communities."
+                      "description": " The organization shall continuously monitor and analyze feedback trends in real time, proactively identifying emerging risks. Insights drive automated or preemptive mitigation actions, system improvements, and strategic decision-making, ensuring full integration into AI risk management and stakeholder communications."
                     }
                   ]
                 },
@@ -3367,11 +3367,11 @@
                   "controls": [
                     {
                       "id": "Measure 3.3.2.",
-                      "description": "Establish Clear Guidelines for Feedback Reporting."
+                      "description": "The organization shall maintain documented feedback channels with clear reporting guidelines. A designated party shall be responsible for recording and categorizing reports, with initial procedures to analyze recurring issues and feed results into AI evaluation."
                     },
                     {
                       "id": "Measure 3.3.3.",
-                      "description": "Assign Dedicated Resources for Feedback Management."
+                      "description": "The organization shall systematically collect, analyze, and document feedback from established channels. Feedback is integrated into AI risk evaluation processes, with defined escalation procedures to address significant issues and inform system updates."
                     }
                   ]
                 },
@@ -3381,7 +3381,7 @@
                   "controls": [
                     {
                       "id": "Measure 3.3.4.",
-                      "description": "Integrate Feedback into AI System Evaluation Metrics."
+                      "description": "The organization shall identify trends and recurring issues from feedback, assess their impact on AI system risk, and implement corrective or preventive measures to reduce future occurrences. Insights shall inform system updates and risk mitigation strategies."
                     }
                   ]
                 },
@@ -3391,7 +3391,7 @@
                   "controls": [
                     {
                       "id": "Measure 3.3.5.",
-                      "description": "Analyze and Address Feedback Trends."
+                      "description": " The organization shall continuously monitor and analyze feedback trends in real time, proactively identifying emerging risks. Insights drive automated or preemptive mitigation actions, system improvements, and strategic decision-making, ensuring full integration into AI risk management and stakeholder communications."
                     }
                   ]
                 },
@@ -4229,11 +4229,7 @@
                   "controls": [
                     {
                       "id": "Manage 4.1.1.",
-                      "description": "Establish a Post-Deployment Monitoring Plan."
-                    },
-                    {
-                      "id": "Manage 4.1.2.",
-                      "description": "Capture and Evaluate User Feedback."
+                      "description": "The organization shall recognize the need to monitor AI systems after deployment and shall be able to respond to incidents or user-reported issues. Monitoring activities may include informal checks of system outputs, basic tracking of major failures, or reactive collection of user feedback."
                     }
                   ]
                 },
@@ -4242,12 +4238,8 @@
                   "level_name": "Managed",
                   "controls": [
                     {
-                      "id": "Manage 4.1.3.",
-                      "description": "Implement an Appeal and Override Mechanism."
-                    },
-                    {
-                      "id": "Manage 4.1.4.",
-                      "description": "Develop a Decommissioning Plan."
+                      "id": "Manage 4.1.2.",
+                      "description": " The organization shall establish and document basic procedures for monitoring AI systems after deployment. Monitoring procedures shall include mechanisms for capturing and evaluating user feedback, tracking defined monitoring signals such as uptime, error rates, and user complaints, and recording incidents for follow-up. Monitoring procedures shall be applied to AI projects where feasible, though yet may not be consistent across the organization."
                     }
                   ]
                 },
@@ -4256,12 +4248,8 @@
                   "level_name": "Defined",
                   "controls": [
                     {
-                      "id": "Manage 4.1.5.",
-                      "description": "Implement Incident Response and Recovery Procedures."
-                    },
-                    {
-                      "id": "Manage 4.1.6.",
-                      "description": "Implement Change Management Processes."
+                      "id": "Manage 4.1.3.",
+                      "description": "The organization shall implement and consistently apply formal post-deployment monitoring procedures across all its AI systems. They shall include documented incident cyber response and recovery management practices. The organization shall implement structured change management, and integration of monitoring activities with DevOps/MLOps pipelines (e.g., automated alerts leading to retraining or testing). Monitoring outputs shall be regularly reviewed by designated individuals and stakeholder groups such as review boards. The organization shall define and control which forms of feedback are disclosed back to AI systems and which are withheld. Responsibilities for monitoring and response shall be embedded into formal organizational roles."
                     }
                   ]
                 },
@@ -4270,8 +4258,8 @@
                   "level_name": "Quantitatively Managed",
                   "controls": [
                     {
-                      "id": "",
-                      "description": "Manage X.X.X Use metrics to measure the effectiveness of Post-Deployment Monitoring Plan"
+                      "id": "Manage 4.1.4.",
+                      "description": "The organization shall establish and apply quantitative metrics and key performance indicators (KPIs) to measure the effectiveness of post-deployment monitoring across all AI systems. Monitoring outputs shall be aggregated and analyzed for trends, anomalies, and systemic risks, with results documented, auditable, and reviewed at regular intervals by governance bodies. The organization shall also measure and manage which monitoring signals and feedback are disclosed back to AI systems and which are withheld, ensuring disclosure practices remain consistent with governance objectives and risk tolerances."
                     }
                   ]
                 },
@@ -4280,8 +4268,8 @@
                   "level_name": "Optimizing",
                   "controls": [
                     {
-                      "id": "Manage 4.1.7.",
-                      "description": "Foster a Culture of Continuous Monitoring and Improvement."
+                      "id": "Manage 4.1.5.",
+                      "description": " The organization shall continuously improve post-deployment monitoring practices based on lessons learnt, performance trends, and predictive insights. Monitoring shall proactively adapt to emerging AI challenges, evolving technologies, and new forms of risk. Advanced methodologies and tools shall be leveraged to anticipate and absorb incidents and system degradation before they occur. Human oversight shall ensure that optimization decisions remain under organizational control. The organization shall foster a culture of AI-aware organizational resilience by embedding continuous improvement into all monitoring activities."
                     }
                   ]
                 }
@@ -4359,7 +4347,7 @@
                   "controls": [
                     {
                       "id": "Manage 4.3.1.",
-                      "description": "Establish a Clear Incident Reporting Process and Rapid Detection Mechanisms."
+                      "description": " The organization shall establish a basic process for reporting AI-related incidents and errors, enabling rapid detection when issues occur. Reporting channels may be informal and ad-hoc but shall provide a means for staff or stakeholders to raise concerns. These channels shall remain entirely outside the visibility and control of AI systems, to prevent the masking of faults, interference with detection, or adaptive behaviors that avoid triggering reports."
                     }
                   ]
                 },
@@ -4369,7 +4357,7 @@
                   "controls": [
                     {
                       "id": "Manage 4.3.2.",
-                      "description": "Implement Rapid Detection Mechanisms."
+                      "description": "The organization shall implement structured mechanisms for the rapid detection of AI-related incidents and errors. These mechanisms shall include defined reporting channels, assigned responsibilities for detection and escalation, and basic documentation of incidents. Human-facing detection and reporting processes shall remain undisclosed to AI systems and outside their span of control, ensuring that AI systems cannot mask faults, interfere with monitoring, or adapt to avoid detection. Implementation at this level shall enable consistent, repeatable detection of incidents across the organization."
                     }
                   ]
                 },
@@ -4379,11 +4367,7 @@
                   "controls": [
                     {
                       "id": "Manage 4.3.3.",
-                      "description": "Conduct Root Cause Analysis."
-                    },
-                    {
-                      "id": "Manage 4.3.6.",
-                      "description": "Document Incident Response Procedures."
+                      "description": " The organization shall conduct root cause analysis for AI-related incidents and errors to identify underlying technical, organizational, or process failures. Findings from each analysis shall be documented, along with incident response procedures, to ensure that lessons learned are captured and consistently applied. Roles and responsibilities for conducting analyses and maintaining documentation shall be formally assigned. All procedures and records shall remain outside the visibility and control of AI systems, preventing interference or adaptation. Implementation at this level shall demonstrate a standardized, organization-wide approach to incident detection, analysis, and response."
                     }
                   ]
                 },
@@ -4393,11 +4377,7 @@
                   "controls": [
                     {
                       "id": "Manage 4.3.4.",
-                      "description": "Use data and metrics to Implement Corrective and Preventive Actions."
-                    },
-                    {
-                      "id": "Manage 4.3.5.",
-                      "description": "Maintain Transparency and Communication."
+                      "description": "The organization shall apply data and metrics to implement Corrective And Preventive Actions (CAPA) for AI-related incidents. Incident detection, response, and outcomes shall be measured against defined performance indicators to ensure effectiveness and continuous improvement. Transparency shall be maintained by communicating incident information, actions taken, and lessons learned to relevant internal and external stakeholders through secure, human-controlled channels. All reporting and communication mechanisms shall remain outside the visibility and influence of AI systems to prevent masking of faults, manipulation, or adaptation. Implementation at this level shall demonstrate a measurable, data-driven, and transparent approach to incident management."
                     }
                   ]
                 },
@@ -4406,8 +4386,8 @@
                   "level_name": "Optimizing",
                   "controls": [
                     {
-                      "id": "Manage 4.3.7.",
-                      "description": "Foster a Culture of Incident Response Readiness."
+                      "id": "Manage 4.3.5.",
+                      "description": "The organization shall foster a culture of readiness for AI-related incident detection and response. Lessons learned, metrics, and emerging threat intelligence shall be continuously integrated into training, processes, and governance structures. Staff at all levels shall be encouraged and empowered to report, analyze, and respond to incidents, reinforcing a shared responsibility for resilience. The organization shall proactively anticipate potential failure modes and evolving risks, adapting procedures accordingly. All practices shall ensure that AI systems remain excluded from visibility or influence over human reporting and response mechanisms. Implementation at this level shall demonstrate a culture of continuous improvement, organizational learning, and proactive resilience in managing AI incidents."
                     }
                   ]
                 }
@@ -4448,3 +4428,4 @@
   }
 
 }
+
