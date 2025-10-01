@@ -4402,7 +4402,7 @@
     "total_functions": 4,
     "total_categories": 19,
     "total_subcategories": 72,
-    "total_controls": 442,
+    "total_controls": 437,
     "by_function": {
       "GOVERN": {
         "categories": 6,
@@ -4422,10 +4422,11 @@
       "MANAGE": {
         "categories": 4,
         "subcategories": 13,
-        "controls": 86
+        "controls": 81
       }
     }
   }
 
 }
+
 
