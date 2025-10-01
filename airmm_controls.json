@@ -1,8 +1,8 @@
 {
   "metadata": {
     "framework_name": "AI Resilience Maturity Model (AI-RMM)",
-    "version": "0.2",
-    "date": "22 August 2025",
+    "version": "0.3",
+    "date": "29 September 2025",
     "description": "A conceptual framework used to assess, measure, and improve the resilience of organizations using or planning to use Artificial Intelligence (AI).",
     "maturity_levels": {
       "1": {
@@ -868,7 +868,7 @@
                   "controls": [
                     {
                       "id": "Govern 4.3.1.",
-                      "description": "Identify and develop a Testing Strategy and an Incident monitoring approach."
+                      "description": "The organization shall establish a minimal testing and incident-monitoring baseline for each AI system prior to initial use and after any material change. The baseline may be informal and ad-hoc, but shall, at a minimum: define minimal go/no-go validation checks for the highest-risk functions; designate a single human-operated reporting channel; assign an accountable owner; and maintain a dated incident log."
                     }
                   ]
                 },
@@ -4446,4 +4446,5 @@
       }
     }
   }
+
 }
