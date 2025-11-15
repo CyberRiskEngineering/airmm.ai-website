@@ -1,8 +1,8 @@
 {
   "metadata": {
     "framework_name": "AI Resilience Maturity Model (AI-RMM)",
-    "version": "0.3",
-    "date": "29 September 2025",
+    "version": "0.4",
+    "date": "11 NOvemnber 2025",
     "description": "A conceptual framework used to assess, measure, and improve the resilience of organizations using or planning to use Artificial Intelligence (AI).",
     "maturity_levels": {
       "1": {
@@ -47,11 +47,7 @@
                   "controls": [
                     {
                       "id": "Govern 1.1.1.",
-                      "description": "Identify all applicable AI-related laws and regulations and on an ad-hoc basis have assessed the potential impact, taking action as necessary."
-                    },
-                    {
-                      "id": "Govern 1.1.2.",
-                      "description": "Assess the potential impact of these laws and regulations on organizations with AI systems."
+                      "description": " The organization shall identify applicable AI-related laws and regulations and perform ad hoc assessments of their potential impact on AI systems. Basic actions to address compliance risks may be taken, but responsibilities and processes remain informal, undocumented, and reactive."
                     }
                   ]
                 },
@@ -60,12 +56,8 @@
                   "level_name": "Managed",
                   "controls": [
                     {
-                      "id": "Govern 1.1.3",
-                      "description": "Develop and document basic compliance policies and procedures addressing applicable AI legal and regulatory requirements."
-                    },
-                    {
-                      "id": "Govern 1.1.4",
-                      "description": "Assign responsibilities for monitoring compliance with legal obligations across departments managing AI systems."
+                      "id": "Govern 1.1.2",
+                      "description": "The organization shall document applicable AI-related laws and regulations and establish basic compliance procedures. Responsibilities for monitoring legal obligations are assigned, and initial processes exist to assess and address compliance risks"
                     }
                   ]
                 },
@@ -74,12 +66,8 @@
                   "level_name": "Defined",
                   "controls": [
                     {
-                      "id": "Govern 1.1.5",
-                      "description": "Standardize and apply compliance procedures consistently across all AI systems and projects in the organization."
-                    },
-                    {
-                      "id": "Govern 1.1.6",
-                      "description": "Conduct regular, formal actions on AI-related policies, documenting findings and actions."
+                      "id": "Govern 1.1.3",
+                      "description": "The organization shall implement consistent compliance procedures for all applicable AI-related laws and regulations. Roles and responsibilities for oversight are clearly defined, and compliance activities are documented and periodically reviewed to ensure alignment with legal obligations"
                     }
                   ]
                 },
@@ -88,12 +76,8 @@
                   "level_name": "Quantitatively Managed",
                   "controls": [
                     {
-                      "id": "Govern 1.1.7",
-                      "description": "Use key performance indicators (KPIs) and compliance metrics to document and track adherence to legal and regulatory AI requirements during assessments."
-                    },
-                    {
-                      "id": "Govern 1.1.8",
-                      "description": "Maintain a centralized compliance dashboard or system to track audit outcomes, and legal updates."
+                      "id": "Govern 1.1.4",
+                      "description": "The organization shall monitor and document adherence to all applicable AI-related laws and regulations using defined KPIs and compliance metrics. A centralized compliance dashboard or system shall track audit results, legal updates, and corrective actions, supporting proactive oversight, reporting, and escalation of compliance risks."
                     }
                   ]
                 },
@@ -102,12 +86,8 @@
                   "level_name": "Optimizing",
                   "controls": [
                     {
-                      "id": "Govern 1.1.9",
-                      "description": "Continuously improve at a regular predefined cadence, compliance procedures using feedback, legal trend analysis, and post-incident reviews related to AI systems."
-                    },
-                    {
-                      "id": "Govern 1.1.10",
-                      "description": "Proactively monitor changes in AI-related legislation and update internal policies before enforcement deadlines or regulatory shifts."
+                      "id": "Govern 1.1.5",
+                      "description": " The organization shall continuously monitor, assess, and ensure compliance with all applicable AI-related laws and regulations in real time. Compliance metrics and KPIs shall drive automated reporting, early detection of gaps, and proactive mitigation actions. The centralized compliance system shall integrate legal updates, audit outcomes, and corrective measures into strategic decision-making, ensuring full organizational alignment and accountability."
                     }
                   ]
                 }
@@ -1167,11 +1147,7 @@
                   "controls": [
                     {
                       "id": "Map 1.1.1.",
-                      "description": "Clearly Define Intended Purposes and Beneficial Uses."
-                    },
-                    {
-                      "id": "Map 1.1.2.",
-                      "description": "Identify Context-Specific Laws, Norms, and Expectations."
+                      "description": "The organization clearly defines the AI system’s intended purpose and beneficial uses, identifying key assumptions and context in an ad-hoc, project-specific manner."
                     }
                   ]
                 },
@@ -1180,12 +1156,8 @@
                   "level_name": "Managed",
                   "controls": [
                     {
-                      "id": "Map 1.1.3.",
-                      "description": "Define Prospective Deployment Settings."
-                    },
-                    {
-                      "id": "Map 1.1.4.",
-                      "description": "Understand User Expectations and Impacts.."
+                      "id": "Map 1.1.2.",
+                      "description": " Basic documentation identifying applicable laws, norms, and expected deployment settings.  User expectations and high-level impacts are noted. Coverage and consistency remain limited across the organization. Documentation is reviewed and approved."
                     }
                   ]
                 },
@@ -1194,8 +1166,8 @@
                   "level_name": "Defined",
                   "controls": [
                     {
-                      "id": "Map 1.1.5.",
-                      "description": "Document Assumptions, Limitations, and TEVV (Testing and Evaluation with Values)."
+                      "id": "Map 1.1.3.",
+                      "description": " A standardized, organization-wide process is used to capture assumptions, limitations, testing, evaluation, verification, and validation (TEVV) considerations for each AI system.  Documentation is reviewed and approved through defined governance channels."
                     }
                   ]
                 },
@@ -1204,8 +1176,8 @@
                   "level_name": "Quantitatively Managed",
                   "controls": [
                     {
-                      "id": "",
-                      "description": "* Map 1.1. 6 - Use data and metrics to assess and maintain documentation"
+                      "id": "Map 1.1.4",
+                      "description": "Data and metrics are used to monitor the accuracy of the context, user expectations, and legal assumptions alignment with real-world conditions. Quantitative indicators inform decisions on deployment suitability and continuous documentation maintenance."
                     }
                   ]
                 },
@@ -1214,8 +1186,8 @@
                   "level_name": "Optimizing",
                   "controls": [
                     {
-                      "id": "Map 1.1.6.",
-                      "description": "Conduct Continuous Mapping Throughout the AI Lifecycle."
+                      "id": "Map 1.1.5.",
+                      "description": " Continuous, dynamic context mapping is embedded into development and operational workflows. Automated or data-driven feedback loops update contextual understanding in real time, ensuring persistent alignment with stakeholder expectations, regulatory evolution, and system performance."
                     }
                   ]
                 }
@@ -2237,7 +2209,7 @@
                   "controls": [
                     {
                       "id": "Measure 1.1.1.",
-                      "description": "Select Appropriate Measurement Approaches."
+                      "description": "The organization shall select basic measurements for AI risks identified as most significant. For each AI system where  risks have been recognized the organization shall identify at least one  measurement approach"
                     }
                   ]
                 },
@@ -2247,11 +2219,7 @@
                   "controls": [
                     {
                       "id": "Measure 1.1.2.",
-                      "description": "Develop and Implement Measurement Metrics."
-                    },
-                    {
-                      "id": "Measure 1.1.3.",
-                      "description": "Establish Measurement Procedures and Tools"
+                      "description": "The organization shall develop and implement basic AI risk measurements for all AI systems with significant risks identified during AI risk mapping. The plan shall specify the approved procedures and tools to be used for collecting, processing, and storing measurement data."
                     }
                   ]
                 },
@@ -2260,12 +2228,8 @@
                   "level_name": "Defined",
                   "controls": [
                     {
-                      "id": "Measure 1.1.4.",
-                      "description": "Integrate Measurement into the AI Development Lifecycle consistently throughout organization."
-                    },
-                    {
-                      "id": "Measure 1.1.5.",
-                      "description": "Document Measurement Approaches and Limitations."
+                      "id": "Measure 1.1.3.",
+                      "description": "The organization shall establish and maintain documented procedures requiring that AI risk measurements be integrated for each AI system and their lifecycles. For each system, the organization shall document the selected measurement approaches as well as known limitations and shall assign roles responsible for maintaining this documentation as systems, data, or risk profiles change."
                     }
                   ]
                 },
@@ -2274,8 +2238,8 @@
                   "level_name": "Quantitatively Managed",
                   "controls": [
                     {
-                      "id": "Measure 1.1.6",
-                      "description": "Use data and metrics to analyze AI risk measurment effectiveness and trends"
+                      "id": "Measure 1.1.4.",
+                      "description": "The organization shall systematically use collected AI risk measurements to evaluate metric effectiveness and identify trends. The results of these analyses shall be used to adjust metrics, thresholds, procedures, and tools."
                     }
                   ]
                 },
@@ -2284,8 +2248,8 @@
                   "level_name": "Optimizing",
                   "controls": [
                     {
-                      "id": "Measure 1.1.6.",
-                      "description": "Continuously Evaluate and Improve Measurement Processes"
+                      "id": "Measure 1.1.5.",
+                      "description": "The organization shall operate a documented, continuous improvement process for collecting AI risk measurements. It shall systematically adapt measurement approaches to new AI architectures, data, and emerging risks."
                     }
                   ]
                 }
@@ -2355,7 +2319,7 @@
                   "controls": [
                     {
                       "id": "Measure 1.3.1.",
-                      "description": "Engage Internal and External Expertise."
+                      "description": " Identify at least one independent internal SME (not on the dev team) and, where feasible, one external assessor. They shall review high-risk releases or major changes on the release."
                     }
                   ]
                 },
@@ -2365,11 +2329,7 @@
                   "controls": [
                     {
                       "id": "Measure 1.3.2.",
-                      "description": "Consult with Domain Experts and Users."
-                    },
-                    {
-                      "id": "Measure 1.3.3.",
-                      "description": "Involve AI Actors and Affected Communities"
+                      "description": " For each AI system there shall be a documented Consultation & External Engagement Procedure. It shall identify and engage domain experts, representative users, relevant AI actors, and affected-community representatives at defined lifecycle gates. It shall record their input, and link all feedback to decisions, mitigations, and tracked work items."
                     }
                   ]
                 },
@@ -2378,8 +2338,8 @@
                   "level_name": "Defined",
                   "controls": [
                     {
-                      "id": "Measure 1.3.5.",
-                      "description": "Document Assessment Involvement and Seek Clear Roles."
+                      "id": "Measure 1.3.3.",
+                      "description": "The organization shall maintain a consistent documented Consultation & External Engagement Procedure for all AI systems across the organization. "
                     }
                   ]
                 },
@@ -2389,7 +2349,7 @@
                   "controls": [
                     {
                       "id": "Measure 1.3.4.",
-                      "description": "Tailor Assessment Involvement to Risk Tolerance."
+                      "description": "The organization shall maintain a documented Consultation & External Engagement Procedure that informs a Risk-Scaled Assessment Standard (RSAS).  RSAS shall be data-driven, instrumented with KPIs, and reviewed at a defined cadence"
                     }
                   ]
                 },
@@ -2398,8 +2358,8 @@
                   "level_name": "Optimizing",
                   "controls": [
                     {
-                      "id": "Measure 1.3.6.",
-                      "description": "Continuously Evaluate and Adapt Assessment Approach."
+                      "id": "Measure 1.3.5.",
+                      "description": "The organization shall operate an automated continuous assessment optimization program that uses the RSAS from the Consultation & External Engagement Procedure to convert the organization’s documented risk tolerance into explicit triggers for risk action."
                     }
                   ]
                 }
@@ -4428,5 +4388,6 @@
   }
 
 }
+
 
 
